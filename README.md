@@ -47,13 +47,11 @@ analysis tools of `wepy`.
 The filenames are of the format `westpa_{run_id}.wepy.h5` where the
 `run_id` values are zero-padded and can be interpreted as:
 
-TODO: rename the IDs to match the sim tracker.
-
 | run_id  | Description |
 |---------|-------------|
 | 24      |             |
-| 26 (25) |             |
-| 28 (26) |             |
+| 26      |             |
+| 28      |             |
 
 
 ### Folding@Home (FAH) Simulation Data
