@@ -1,0 +1,6 @@
+parm    ../common_files/complex.parm7
+trajin  ../../WESTPA_InitialRebinding_CV1_iRMSD/traj_segs/000088/000063/seg.nc
+trajout ./bstate.rst7
+trajout ./bstate.pdb
+go
+

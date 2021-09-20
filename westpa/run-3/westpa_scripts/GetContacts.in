@@ -1,0 +1,11 @@
+parm ../common_files/complex.parm7
+trajin ../bstates/bstate-4.9AA.rst7
+#nativecontacts name SVI  @15  byresidue mindist distance 4.5   out Contacts_Smarca_VHL.dat
+#nativecontacts name SVI  :1-115&!@H* :116-264&!@H*  byresidue mindist distance 4.5   out Contacts_Smarca_VHL.dat  writecontacts ContactsInfo.dat
+nativecontacts name SVI  ':34,35,36,37,39,40,41,42,43,45,46,47,48,49,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95  & !@H*'   ':116,118,119,120,121,122,123,124,125,126,128,129 & !@H*'  byresidue mindist distance 4.5   out Contacts_Smarca_VHL.dat  writecontacts ContactsInfo_SVI.dat
+nativecontacts name SPI  ':34,35,36,37,39,40,41,42,43,45,46,47,48,49,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95 & !@H*'   ':FWZ & !@H*'  byresidue mindist distance 4.5   out Contacts_Smarca_Protac.dat   writecontacts ContactsInfo_SPI.dat
+nativecontacts name VPI  ':116,118,119,120,121,122,123,124,125,126,128,129 & !@H*'   ':FWZ & !@H*'   byresidue mindist distance 4.5   out Contacts_VHL_Protac.dat   writecontacts ContactsInfo_VPI.dat
+go
+
+
+

@@ -1,0 +1,6 @@
+parm ../common_files/reference.parm7
+trajin ../common_files/reference.rst7
+reference ../common_files/reference.rst7
+nativecontacts name SVI  :1-115&!@H* :116-264&!@H*  byresidue mindist distance 4.5  reference  out Ref_Smarca_VHL.dat
+nativecontacts name SPI  :1-115&!@H* :FWZ&!@H*      byresidue mindist distance 4.5  reference  out Ref_Smarca_Protac.dat
+go

@@ -1,0 +1,64 @@
+MD walker
+
+ &cntrl
+
+!!! INPUT
+ imin = 0       ! no minimization
+ irest = 0      ! new simulation
+ ntx = 1        ! read in coordinates only
+
+!! irest = 1      ! restarting a simulation
+!! ntx = 5    	! read in coordinates and velocities
+
+!!! OUTPUT
+ ntxo = 2       ! restart file format binary
+ ntpr = 10000    ! write energy information every .... steps to log file
+ ntwx = 10000    ! write coordinates every .... steps to a trajectory file
+ ntwe = 10000    ! write energies/temperature every .... steps to corresponding file
+ ntwr = 10000    ! write information every .... steps to restart file
+ ioutfm = 1     ! use binary NetCDF format for trajectories
+ iwrap = 0	! DO NOT wrap coordinates into unit cell
+
+!!! DYNAMICS
+ nstlim = 10000 ! perform ... MD steps
+ dt = 0.002       ! time step in ps
+
+!!! TEMPERATURE
+ ntt = 3        ! constant temperature
+ temp0 = 300    ! T = ... K
+ gamma_ln = 2   ! collision frequency [units of 1/ps]
+ ig = RAND      ! take pseudo-random-number seed from WESTPA 
+
+!!! PRESSURE
+ ntp = 1        ! constant pressure, isotropic scaling
+ barostat = 2   ! Monte Carlo barostat
+ pres0 = 1.0	! reference pressure = 1 bar
+ taup = 3.0     ! pressure relaxation time = 3 ps 
+
+!!! CONSTRAINTS OR RESTRAINTS 
+ ntc = 2        ! bonds with hydrogens constrained
+ ntr = 0 	! no positional restraints
+
+!!! POTENTIAL ENERGY EVALUATION
+ ntf = 2        ! ignore bonded interactions with hydrogens (ntc != 1)
+ ntb = 2	! constant-pressure PBCs
+ cut = 8.0	! non-bonded cutoff in A (should be 10-ish for good accuracy)
+ nsnb = 25      ! update nonbonded list every ... steps (should be set to 20 for good accuracy)
+
+!!! MISCELLANEOUS
+ nmropt = 1     ! allowing for varying conditions to be defined below (e.g. T cycles, restraints, ...)
+
+ /
+ &wt type = 'DUMPFREQ'
+ istep1 = 5000
+ /
+ &wt type = 'END'
+ /
+
+ DISANG  = ./rest.in
+ DUMPAVE = rest.txt
+ LISTIN  = POUT
+ LISTOUT = POUT
+
+ &end
+

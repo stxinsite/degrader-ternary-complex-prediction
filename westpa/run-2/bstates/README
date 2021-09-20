@@ -1,0 +1,4 @@
+
+cpptraj get_bstate.in
+# The picked structure is one that was acceptable in the ETC analysis
+
