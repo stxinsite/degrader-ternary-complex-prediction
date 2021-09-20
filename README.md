@@ -62,7 +62,7 @@ output format as from the FAH infrastructure.
 
 The structure is like:
 
-- `P{project_id}`
+- `PROJ{project_id}`
   - `RUN{run_id}`
     - `CLONE{clone_id}`
       - `results{gen_index}`
