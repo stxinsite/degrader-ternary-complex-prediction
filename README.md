@@ -44,6 +44,9 @@ The files in the `paperdata/WES_data` directory that are prefixed by
 outputs converted to a single HDF5 file that is compatible with the
 analysis tools of `wepy`.
 
+The filenames are of the format `westpa_{run_id}.wepy.h5` where the
+`run_id` values are zero-padded and can be interpreted as:
+
 TODO: rename the IDs to match the sim tracker.
 
 | run_id  | Description |
@@ -51,3 +54,22 @@ TODO: rename the IDs to match the sim tracker.
 | 24      |             |
 | 26 (25) |             |
 | 28 (26) |             |
+
+
+### Folding@Home (FAH) Simulation Data
+
+There is a single FAH project (project ID: 18018) in the
+`paperdata/FAH_data` folder. This data is structured in the same
+output format as from the FAH infrastructure.
+
+The structure is like:
+
+- `P{project_id}`
+  - `RUN{run_id}`
+    - `CLONE{clone_id}`
+      - `results{gen_index}`
+        - `positions.xtc`
+        
+Where the `positions.xtc` data contain the actual simulation data in
+the GROMACS XTC format which can be read by a number of different
+software packages.
