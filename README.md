@@ -3,17 +3,17 @@
 
 ## Data
 
-All data is available for download from this [Google Bucket][https://console.cloud.google.com/storage/browser/paperdata]
+All data is available for download from this [Google Bucket](https://console.cloud.google.com/storage/browser/paperdata)
 
 
 ### Weighted Ensemble Simulations (WES)
 
 The WES data can be found in the subsection: `paperdata/WES_data`
 
-All WES data is stored in [HDF5 format][https://www.hdfgroup.org/solutions/hdf5]. 
+All WES data is stored in [HDF5 format](https://www.hdfgroup.org/solutions/hdf5). 
 
 The data can be read directly using any HDF5 library and is also
-compatible with the [wepy][https://github.com/ADicksonLab/wepy]
+compatible with the [wepy](https://github.com/ADicksonLab/wepy)
 library.
 
 #### wepy data
@@ -26,7 +26,7 @@ The filenames are of the format
 are zero-padded and can be interpreted as:
 
 | run_id | Description |
-|--------+-------------|
+|--------|-------------|
 |      3 |             |
 |      4 |             |
 |      5 |             |
@@ -40,14 +40,14 @@ simulations run with the same initial conditions.
 #### WESTPA Data
 
 The files in the `paperdata/WES_data` directory that are prefixed by
-`westpa` are [WESTPA][https://github.com/westpa/westpa] simulation
+`westpa` are [WESTPA](https://github.com/westpa/westpa) simulation
 outputs converted to a single HDF5 file that is compatible with the
 analysis tools of `wepy`.
 
 TODO: rename the IDs to match the sim tracker.
 
 | run_id  | Description |
-|---------+-------------|
+|---------|-------------|
 | 24      |             |
 | 26 (25) |             |
 | 28 (26) |             |
