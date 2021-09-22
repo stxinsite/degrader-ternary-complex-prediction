@@ -5,6 +5,9 @@
 
 All data is available for download from this [Google Bucket](https://console.cloud.google.com/storage/browser/paperdata)
 
+### Movies
+
+Movies are in the folder `paperdata/movies`. We recommend using the [VLC player](https://www.videolan.org/vlc/) for the best experience.
 
 ### Weighted Ensemble Simulations (WES)
 
