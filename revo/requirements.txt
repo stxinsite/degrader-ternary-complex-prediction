@@ -1,0 +1,6 @@
+numpy
+scipy
+
+wepy[all]
+geomm
+mdtraj
