@@ -30,12 +30,12 @@ are zero-padded and can be interpreted as:
 
 | run_id | Description |
 |--------|-------------|
-|      3 |             |
-|      4 |             |
-|      5 |             |
-|      6 |             |
-|      8 |             |
-|     10 |             |
+| 1      |             |
+| 2      |             |
+| 3      |             |
+| 4      |             |
+| 5      |             |
+| 6      |             |
 
 And the `replicate_index` is just an index of the identical replicate
 simulations run with the same initial conditions.
@@ -52,9 +52,9 @@ The filenames are of the format `westpa_{run_id}.wepy.h5` where the
 
 | run_id  | Description |
 |---------|-------------|
-| 24      |             |
-| 26      |             |
-| 28      |             |
+| 1       |             |
+| 2       |             |
+| 3       |             |
 
 
 ### Folding@Home (FAH) Simulation Data
