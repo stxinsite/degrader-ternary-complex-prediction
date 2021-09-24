@@ -1,7 +1,7 @@
 
 We suggest doing this in a conda environment using Python 3.7.
 
-First install things from conda.
+First install requirements from conda.
 
 OpenMM:
 
