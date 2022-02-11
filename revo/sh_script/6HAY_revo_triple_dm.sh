@@ -18,7 +18,7 @@ source /bgfs01/common/we_envs/conda/bin/activate /bgfs01/common/we_envs/envs/wep
 #module use /bgfs01/common/we_envs/modulefiles
 #module load stx_wepy
 
-HOME_DIR=$pwd
+HOME_DIR=$(pwd)
 
 
 JOBNAME=${SLURM_JOB_ID}
@@ -30,7 +30,7 @@ mkdir $WORK_DIR
 
 #LOG=$WORK_DIR/log
 
-cp -r $HOME_DIR/6HAY_inputs/ $WORK_DIR
+cp -r $HOME_DIR/inputs/6HAY_inputs $WORK_DIR
 cp $HOME_DIR/python_scripts/6HAY_triple_distance_metric.py $WORK_DIR
 
 cd $WORK_DIR

@@ -339,7 +339,7 @@ SPARSE_FIELDS = (('velocities', 10),
 ## INPUTS/OUTPUTS                                                                                    
 
 # the inputs directory                                                                               
-inputs_dir = osp.realpath('./amber_inputs')
+inputs_dir = osp.realpath('./ACBI1_inputs')
 # the outputs path                                                                                   
 outputs_dir = osp.realpath('./outputs')
 # make the outputs dir if it doesn't exist                                                           

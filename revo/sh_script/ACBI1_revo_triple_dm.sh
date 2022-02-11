@@ -30,7 +30,7 @@ mkdir $WORK_DIR
 
 #LOG=$WORK_DIR/log
 
-cp -r $HOME_DIR/ACBI1_inputs $WORK_DIR
+cp -r $HOME_DIR/inputs/ACBI1_inputs/ $WORK_DIR
 cp $HOME_DIR/python_scripts/ACBI1_triple_distance_metric.py $WORK_DIR
 
 cd $WORK_DIR
