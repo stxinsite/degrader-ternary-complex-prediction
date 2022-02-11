@@ -21,8 +21,7 @@ source /bgfs01/common/we_envs/conda/bin/activate /bgfs01/common/we_envs/envs/wep
 HOME_DIR=$(pwd)
 echo $HOME_DIR
 
-#JOBNAME=${SLURM_JOB_ID}
-JOBNAME=1
+JOBNAME=${SLURM_JOB_ID}
 
 SCRATCH_DIR=$HOME_DIR/'simulations/6HAX'
 WORK_DIR=$SCRATCH_DIR/$JOBNAME
