@@ -353,7 +353,7 @@ please provide:
 $ python scripts/getTopNModelsFromScore.py 004.dock/job_1/score.sc 004.dock/job_1/score.reranked.sc 004.dock/job_1/listDecoysPDBFiles.txt $BASE_FOLDER/004.dock/job_1/
 ```
 
-This will produce a new file score.reranked.sc with the following line entries separated by commas (i.e., columns will be separated by the ,):
+This will produce a new file `score.reranked.sc` with the following line entries separated by commas (i.e., columns will be separated by the ,):
 
 ```
 # total_score   rms     CAPRI_rank      Fnat    I_sc    I_rms   filename
@@ -399,7 +399,7 @@ python scripts/getFileListConformers.py $BASE_FOLDER/003.linker/0.1A/ $BASE_FOLD
 The resulting output file `listLinkerPDB.txt`  must contain full paths to the PDB files with the linker conformers.
 
 ### 6. Assembling the ternary structures: Alignment of the Linker Conformers onto the Docking Models
-This section follows the protocol suggested by Nan Bai et al. 
+This section follows the protocol suggested by Nan Bai et al. ( https://pubs.acs.org/doi/10.1021/acs.jcim.0c01451 ) 
 
 6.1. Preparation
 Prepare (by visual inspection) the following text files with the lists of atoms from the linker and ligand/warhead that will be used in structural alignment:
@@ -463,7 +463,7 @@ cd 005.ternary/structures/
 ```
 conda activate rdkit_local
 
-time python ../../scripts/PROTAC_ternary-master/ternary_model_prediction.py -da ../decoy_atom_list.txt -la ../linker_atom_list.txt -wd ../decoy_atom_list_delete.txt -ld ../linker_atom_list_delete.txt -dl ../../004.dock/job_1/listDecoysPDBFiles_top10.txt -ll ../../003.linker/0.3A/listLinkerPDB.txt -c 0.3 -r ./rmsd.cst1.job1_0.05A.txt -t specify > log
+time python $BASE_FOLDER/scripts/PROTAC_ternary-master/ternary_model_prediction.py -da $BASE_FOLDER/005.ternary/decoy_atom_list.txt -la $BASE_FOLDER/005.ternary/linker_atom_list.txt -wd $BASE_FOLDER/005.ternary/decoy_atom_list_delete.txt -ld $BASE_FOLDER/005.ternary/linker_atom_list_delete.txt -dl $BASE_FOLDER/004.dock/job_1/listDecoysPDBFiles_top10.txt -ll $BASE_FOLDER/003.linker/0.1A/listLinkerPDB.txt -c 0.3 -r ./rmsd.cst1.job1_0.1A.txt -t specify > log
 ```
 
 NOTE: It may happen that there is no alignment of linker conformers onto the top-10 binary docking predictions that satisfy the required RMS-threshold (command-line parameter -c in the above script). In this case, one may either 
@@ -499,7 +499,7 @@ please provide:
 (iii). file to save slurm script;
 (iv). file name pattern: the first five symbols in the PDB filenames that contain ternary structures;
 
-$ srun -J "rerank.3" -n 1 --partition project --reservation advsim --qos maxjobs python ../../scripts/getSLURMScore.py $BASE_FOLDER/005.ternary/structures/protac/ $BASE_FOLDER/005.ternary/structures/protac/ $BASE_FOLDER/006.rerank/slurm_score.sh
+python ../../scripts/getSLURMScore.py $BASE_FOLDER/005.ternary/structures/protac/ $BASE_FOLDER/005.ternary/structures/protac/ $BASE_FOLDER/006.rerank/slurm_score.sh
 ```
 
 This will create a file `$BASE_FOLDER/006.rerank/slurm_score.sh`  and also will output an integer number into the terminal (in this particular example – 462). This integer is the number of ternary predictions for which the scoring must be run. Thus, we use this number inside the script to set up the submission array (`vim $BASE_FOLDER/006.rerank/slurm_score.sh`):
