@@ -43,7 +43,6 @@ def strip_hydrogen_from_traj(trajectory):
     return no_h_traj
                                                                                                              
 def calculate_warhead_vector(fields_d, *args, **kwargs):
-    print('Hi')
     
     positions = fields_d['positions']                                                                                                                                 
     min_irmsd = fields_d['observables/binary_irmsd']
@@ -81,8 +80,9 @@ def calculate_warhead_vector(fields_d, *args, **kwargs):
 wepy_h5_path = str(sys.argv[1])
 simulation_pdb_path = str(sys.argv[2])
 ref_structure_pdb_list = str(sys.argv[3])
-#irmsd_matrix_path = str(sys.argv[4]) 
-                                                                                                                                                   
+irmsd_matrix_path = str(sys.argv[4]) 
+wrmsd_matrix_path = str(sys.argv[5])
+
 # Load in simulation pdb
 sim_pdb = mdj.load_pdb(simulation_pdb_path)
 sim_top = sim_pdb.topology
@@ -215,5 +215,5 @@ with wepy_h5:
                                                      save_to_hdf5='warhead_rmsd',
                                                      return_results=True)
                                                                                                              
-# Save IRMSD Matrix
-#np.savetxt(warhead_matrix_path, warhead_rmsd_matrix, delimiter = ',')
+# Save warhead Matrix
+np.savetxt(wrmsd_matrix_path, warhead_rmsd_matrix, delimiter = ',')

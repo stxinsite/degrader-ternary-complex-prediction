@@ -82,7 +82,7 @@ def calculate_binary_irmsd_vector(fields_d, *args, **kwargs):
 wepy_h5_path = str(sys.argv[1])
 simulation_pdb_path = str(sys.argv[2])
 reference_list = str(sys.argv[3])
-#irmsd_matrix_path = str(sys.argv[4]) 
+irmsd_matrix_path = str(sys.argv[4]) 
                                                                                                             
 # Load in reference structure
 ref_structure_path_list = np.loadtxt(reference_list, dtype = str)
