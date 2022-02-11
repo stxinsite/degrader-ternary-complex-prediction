@@ -73,7 +73,7 @@ conda environment with Python2 (to use `molfile_to_params.py` from ROSETTA);
 experimentation with RosettaDock sampling options;
 
 ## Workflow
-There are 9 conventional sequential steps in the workflow:
+There are 8 conventional sequential steps in the workflow:
 
 1. preparation of PDB files;
 
@@ -125,7 +125,8 @@ continue with the next steps:
 
 ```cp 6hax.1.pdb 6hax.1.AX_BY.pdb```
 
-in the file 6hax.1.AX_BY.pdb delete chains C , D  and waters;  by comparing files 6hax.1.linker.pdb  and 6hax.1.AX_BY.pdb remove the atoms of the linker from 6hax.1.AX_BY.pdb and change chainIDs of the warhead (from B to X ) and of the ligand (from B to Y); change the residue name: for the warhead – from `FWZ` to `1_X`; for the ligand – from `FWZ` to `1_Y`;
+in the file `6hax.1.AX_BY.pdb` delete chains `C` , `D`  and waters;  by comparing files `6hax.1.linker.pdb`  and `6hax.1.AX_BY.pdb` remove the atoms of the linker from `6hax.1.AX_BY.pdb` and change chainIDs of the warhead (from `B` to `X` ) and of the ligand (from `B` to `Y`); change the residue name: for the warhead – from `FWZ` to `1_X`; for the ligand – from `FWZ` to `1_Y`;
+
 
 ```grep '1_X' 6hax.1.AX_BY.pdb > warhead.pdb```
 
@@ -137,9 +138,9 @@ conda activate py27   # activate an environment with Python2.7
 python $MOL2PARAMS warhead.sdf -p warhead -n 1_X --clobber --keep-names
 ```
 
-This will produce two new files: warhead_0001.pdb and warhead.params.
+This will produce two new files: `warhead_0001.pdb` and `warhead.params`.
 
-*NOTE:* Rosetta script molfile_to_params.py sometimes reorders names of atoms: the order of atomic entries may differ in both the generated PARAMS-file, the output `<X>_0001.pdb` file and the initial `<X>.pdb` file!  If this happens, then both the `docking_prepack_protocol` and `docking_protocol` will produce ERRORs.  To fix this issue, the following steps must be done:
+*NOTE:* Rosetta script `molfile_to_params.py` sometimes reorders names of atoms: the order of atomic entries may differ in both the generated PARAMS-file, the output `<X>_0001.pdb` file and the initial `<X>.pdb` file!  If this happens, then both the `docking_prepack_protocol` and `docking_protocol` will produce ERRORs.  To fix this issue, the following steps must be done:
 
 ```
 conda deactivate
@@ -163,7 +164,7 @@ python $MOL2PARAMS ligand.sdf -p ligand -n 1_Y --clobber --keep-names
 
 This will produce two new files: `ligand_0001.pdb` and `ligand.params`.
 
-NOTE: Rosetta script molfile_to_params.py sometimes reorders names of atoms: the order of atomic entries may differ in both the generated PARAMS-file, the output `<X>_0001.pdb` file and the initial `<X>.pdb` file!  If this happens, then both the `docking_prepack_protocol` and `docking_protocol` will produce ERRORs.  To fix this issue, the following steps must be done:
+NOTE: Rosetta script `molfile_to_params.py` sometimes reorders names of atoms: the order of atomic entries may differ in both the generated PARAMS-file, the output `<X>_0001.pdb` file and the initial `<X>.pdb` file!  If this happens, then both the `docking_prepack_protocol` and `docking_protocol` will produce ERRORs.  To fix this issue, the following steps must be done:
 
 ```
 conda deactivate
@@ -172,11 +173,11 @@ python ../scripts/fix_order_atoms.pdb ligand.params ligand_0001.pdb ligand.fixed
 
 The newly produced file `ligand.fixed.params` will be used further.
 
-in the file warhead_0001.pdb
-change chainID into X 
+in the file `warhead_0001.pdb`
+change chainID into `X` 
 
-in the file ligand_0001.pdb
-change chainID into Y
+in the file `ligand_0001.pdb`
+change chainID into `Y`
 
 use a text editor to replace atom entries for the warhead and ligand in the file `6hax.1.AX_BY.pdb` by the corresponding entries from the files `warhead_0001.pdb`  and `ligand_0001.pdb` respectively.
 The newly edited PDB file `6hax.1.AX_BY.pdb` will be used on the next step of the protocol.
@@ -195,7 +196,7 @@ This will produce two files: `6hax.1.AX_BY_0001.pdb` and `score.sc`. The produce
 
 ### 3. Generate Conformations for the linker:
 
-Conformations are generated with the RDKit
+Conformations are generated with the `RDKit`
 
 generate an ensemble of conformations:
 
@@ -208,11 +209,12 @@ mkdir 003.linker
 mkdir 003.linker/0.1A 
 conda activate my-rdkit-env
 python scripts/generate_conformers.py 001.prep/6hax.1.linker.smi 003.linker/0.1A/ 1000 1000 0.1
+```
 
 where the last tree parameters in the line are: 1000 – number of conformers to generate, 1000 – number of attempts to make to generate a conformer, 0.1 – the RMS threshold (in A) that each pair of generate conformers must satisfy (run void python scripts/generate_conformers.py to see the instructions for input parameters).
 
 Analyze the generated conformers: get distances between the specified anchor atoms of the linker.
-By visual inspection of the PDB files in 003.linker/0.1A/ identify the two terminal atoms – N1 and C1. Use these names in the following command:
+By visual inspection of the PDB files in `003.linker/0.1A/` identify the two terminal atoms – `N1` and `C1`. Use these names in the following command:
 
 ```
 python scripts/getDistanceStats.py 003.linker/0.3A/ N1 C1 003.linker/0.3A/linker_dist.stat
@@ -220,8 +222,12 @@ python scripts/getDistanceStats.py 003.linker/0.3A/ N1 C1 003.linker/0.3A/linker
 
 This will produce the file `003.linker/0.1A/linker_dist.stat` that contains distances between atoms `N1` and  `C1` (in A) for each of the generated conformers. The last line in this file contains the mean , standard deviation and number of conformers – see image below:
 
-Screenshot with the contents of the file `003.linker`
+[plot](pics/fig-1.png)
+
+Screenshot with the contents of the file `003.linker/0.1A/linker_dist.stat`
 To visualize the distribution of distances between end of the linker: edit the file `003.linker/0.3A/linker_dist.stat` – remove the last line and add the following line at the top:
+
+[plot](pics/fig-2.png)
 
 
 Then, run the following commands:
@@ -229,8 +235,10 @@ Then, run the following commands:
 ```
 conda activate seaborn
 python scripts/seaborn_hist_linker.py 003.linker/0.3A/linker_dist.stat
-And as a result get the following figure:
 ```
+And as a result get the following figure:
+
+[plot](pics/fig-3.png)
 
 The values of mean distance  and standard deviation will be used in the restraints on the next step – binary docking with Rosetta.
 
