@@ -1,0 +1,4 @@
+Step 1. Use VMD and the `final_01_for_paper_align_on_CRL_VHL.tcl` script to align VHL:HBF:SMRACA2 frames from HREMD on meta-eABF simulations of CRL-VHL. Make sure the VHL selected residue in line 19 `set v0 [atomselect 0 "chain B and name CA and resid 9 to 95 133 to 146"]` is correct as the residue numbers from VHL:HBF:SMARCA2 simulations might be slightly shifted for each HREMD simulation.
+Step 2. Use the Python script `final_02_cal_Lys_distances.py` to calculate SMARCA2 Lys residue distances from the ubiquitin C-terminus carbon atom where ubiquitin gets transferred. 
+Step 3. Use the Python script `final_03_plot_lys_distances.py` to plot normalized Lys distance distributions for all Lys residues.
+Step 4. Use the Python script `final_04_plot_lys_distances_separately.py` to plot normalized Lys distance distributions for each individual Lys residue separately. 
