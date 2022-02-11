@@ -36,6 +36,13 @@ e.g.:
 conda install -c openbabel openbabel
 ```
 
+SEABORN
+
+e.g.:
+```
+conda install -c anaconda seaborn
+```
+
 ### Problem Statement
 Quickly produce reasonable ternary structures of POI:PROTAC:E3 complexes for further analysis or refinement with physics-based simulations.
 
@@ -340,6 +347,8 @@ echo "All done."
 Then, submit to SLURM:
 `sbatch  slurm_dock.sh` this will produce `$NUM_STR` of docking predictions in the PDB files saved into the current folder (i.e., into `004.dock/job_1/`)
 
+The resulting `score.sc` file will contain the values of CAPRI criteria (i.e., `fNat`, `I-RMSD` and `L-RMSD`) with respect to the initial structure (which is the co-crystallized structure from 6HAX). NOTE that this initial structure is perturbed (see command-line option above `-dock_pert`) and that we employ distance restraints that limit sampling of the docking poses.
+
 ### 5. Re-ranking of Rosetta binary docking predictions 
 Use the generated `score.sc` file from the previous stage to re-rank predictions based on the Rosetta interface score, `I_sc`:
 
@@ -513,3 +522,4 @@ Submit the jobs:
 ```
 $ sbatch --array=[0-461]%10 $BASE_FOLDER/006.rerank/slurm_score.sh
 ```
+this will produce a set of `*.score` files.
