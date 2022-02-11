@@ -222,12 +222,12 @@ python scripts/getDistanceStats.py 003.linker/0.3A/ N1 C1 003.linker/0.3A/linker
 
 This will produce the file `003.linker/0.1A/linker_dist.stat` that contains distances between atoms `N1` and  `C1` (in A) for each of the generated conformers. The last line in this file contains the mean , standard deviation and number of conformers – see image below:
 
-[plot](pics/fig-1.png)
+[plot](./pics/fig-1.png)
 
 Screenshot with the contents of the file `003.linker/0.1A/linker_dist.stat`
 To visualize the distribution of distances between end of the linker: edit the file `003.linker/0.3A/linker_dist.stat` – remove the last line and add the following line at the top:
 
-[plot](pics/fig-2.png)
+[plot](./pics/fig-2.png)
 
 
 Then, run the following commands:
@@ -238,7 +238,7 @@ python scripts/seaborn_hist_linker.py 003.linker/0.3A/linker_dist.stat
 ```
 And as a result get the following figure:
 
-[plot](pics/fig-3.png)
+[plot](./pics/fig-3.png)
 
 The values of mean distance  and standard deviation will be used in the restraints on the next step – binary docking with Rosetta.
 
