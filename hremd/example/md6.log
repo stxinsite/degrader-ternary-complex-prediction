@@ -1,0 +1,1992 @@
+Log file opened on Thu Feb 10 22:01:10 2022
+Host: stxcompute021  pid: 3819  rank ID: 0  number of ranks:  1
+                      :-) GROMACS - gmx mdrun, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi mdrun -cpi -cpt 5 -maxh 0.2 -plumed plumed.dat -replex 500 -hrex -multi 20
+
+GROMACS version:    2018.8
+Precision:          single
+Memory model:       64 bit
+MPI library:        MPI
+OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 64)
+GPU support:        CUDA
+SIMD instructions:  NONE
+FFT library:        fftw-3.3.8
+RDTSCP usage:       enabled
+TNG support:        enabled
+Hwloc support:      disabled
+Tracing support:    disabled
+Built on:           2021-05-20 16:28:38
+Built by:           utsab.shrestha@stxfrontend001 [CMAKE]
+Build OS/arch:      Linux 4.15.0-128-generic x86_64
+Build CPU vendor:   Unknown
+Build CPU brand:    Unknown
+Build CPU family:   0   Model: 0   Stepping: 0
+Build CPU features: Unknown
+C compiler:         /usr/bin/cc GNU 7.5.0
+C compiler flags:    -pthread    -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast  
+C++ compiler:       /usr/bin/c++ GNU 7.5.0
+C++ compiler flags:  -pthread   -std=c++11   -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast  
+CUDA compiler:      /usr/local/cuda/bin/nvcc nvcc: NVIDIA (R) Cuda compiler driver;Copyright (c) 2005-2019 NVIDIA Corporation;Built on Wed_Oct_23_19:24:38_PDT_2019;Cuda compilation tools, release 10.2, V10.2.89
+CUDA compiler flags:-gencode;arch=compute_30,code=sm_30;-gencode;arch=compute_35,code=sm_35;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_52,code=sm_52;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=compute_75;-use_fast_math;-D_FORCE_INLINES;; ;-pthread;-std=c++11;-O3;-DNDEBUG;-funroll-all-loops;-fexcess-precision=fast;
+CUDA driver:        11.20
+CUDA runtime:       10.20
+
+
+Running on 1 node with total 16 cores, 32 logical cores, 4 compatible GPUs
+Hardware detected on host stxcompute021 (the node of MPI rank 6):
+  CPU info:
+    Vendor: Intel
+    Brand:  Intel(R) Xeon(R) CPU E5-2620 v4 @ 2.10GHz
+    Family: 6   Model: 79   Stepping: 1
+    Features: aes apic avx avx2 clfsh cmov cx8 cx16 f16c fma hle htt intel lahf mmx msr nonstop_tsc pcid pclmuldq pdcm pdpe1gb popcnt pse rdrnd rdtscp rtm sse2 sse3 sse4.1 sse4.2 ssse3 tdt x2apic
+  Hardware topology: Basic
+    Sockets, cores, and logical processors:
+      Socket  0: [   0  16] [   1  17] [   2  18] [   3  19] [   4  20] [   5  21] [   6  22] [   7  23]
+      Socket  1: [   8  24] [   9  25] [  10  26] [  11  27] [  12  28] [  13  29] [  14  30] [  15  31]
+  GPU info:
+    Number of GPUs detected: 4
+    #0: NVIDIA GeForce GTX 1080 Ti, compute cap.: 6.1, ECC:  no, stat: compatible
+    #1: NVIDIA GeForce GTX 1080 Ti, compute cap.: 6.1, ECC:  no, stat: compatible
+    #2: NVIDIA GeForce GTX 1080 Ti, compute cap.: 6.1, ECC:  no, stat: compatible
+    #3: NVIDIA GeForce GTX 1080 Ti, compute cap.: 6.1, ECC:  no, stat: compatible
+
+Highest SIMD level requested by all nodes in run: AVX2_256
+SIMD instructions selected at compile time:       None
+This program was compiled for different hardware than you are running on,
+which could influence performance.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+M. J. Abraham, T. Murtola, R. Schulz, S. Páll, J. C. Smith, B. Hess, E.
+Lindahl
+GROMACS: High performance molecular simulations through multi-level
+parallelism from laptops to supercomputers
+SoftwareX 1 (2015) pp. 19-25
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Páll, M. J. Abraham, C. Kutzner, B. Hess, E. Lindahl
+Tackling Exascale Software Challenges in Molecular Dynamics Simulations with
+GROMACS
+In S. Markidis & E. Laure (Eds.), Solving Software Challenges for Exascale 8759 (2015) pp. 3-27
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Pronk, S. Páll, R. Schulz, P. Larsson, P. Bjelkmar, R. Apostolov, M. R.
+Shirts, J. C. Smith, P. M. Kasson, D. van der Spoel, B. Hess, and E. Lindahl
+GROMACS 4.5: a high-throughput and highly parallel open source molecular
+simulation toolkit
+Bioinformatics 29 (2013) pp. 845-54
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and C. Kutzner and D. van der Spoel and E. Lindahl
+GROMACS 4: Algorithms for highly efficient, load-balanced, and scalable
+molecular simulation
+J. Chem. Theory Comput. 4 (2008) pp. 435-447
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+D. van der Spoel, E. Lindahl, B. Hess, G. Groenhof, A. E. Mark and H. J. C.
+Berendsen
+GROMACS: Fast, Flexible and Free
+J. Comp. Chem. 26 (2005) pp. 1701-1719
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+E. Lindahl and B. Hess and D. van der Spoel
+GROMACS 3.0: A package for molecular simulation and trajectory analysis
+J. Mol. Mod. 7 (2001) pp. 306-317
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+H. J. C. Berendsen, D. van der Spoel and R. van Drunen
+GROMACS: A message-passing parallel molecular dynamics implementation
+Comp. Phys. Comm. 91 (1995) pp. 43-56
+-------- -------- --- Thank You --- -------- --------
+
+Input Parameters:
+   integrator                     = md
+   tinit                          = 0
+   dt                             = 0.002
+   nsteps                         = 500000000000
+   init-step                      = 0
+   simulation-part                = 1
+   comm-mode                      = Linear
+   nstcomm                        = 100
+   bd-fric                        = 0
+   ld-seed                        = -351620
+   emtol                          = 10
+   emstep                         = 0.01
+   niter                          = 20
+   fcstep                         = 0
+   nstcgsteep                     = 1000
+   nbfgscorr                      = 10
+   rtpi                           = 0.05
+   nstxout                        = 250000
+   nstvout                        = 250000
+   nstfout                        = 0
+   nstlog                         = 2500
+   nstcalcenergy                  = 100
+   nstenergy                      = 2500
+   nstxout-compressed             = 2500
+   compressed-x-precision         = 1000
+   cutoff-scheme                  = Verlet
+   nstlist                        = 10
+   ns-type                        = Grid
+   pbc                            = xyz
+   periodic-molecules             = false
+   verlet-buffer-tolerance        = 0.005
+   rlist                          = 1.2
+   coulombtype                    = PME
+   coulomb-modifier               = Potential-shift
+   rcoulomb-switch                = 0
+   rcoulomb                       = 1.2
+   epsilon-r                      = 1
+   epsilon-rf                     = inf
+   vdw-type                       = Cut-off
+   vdw-modifier                   = Potential-shift
+   rvdw-switch                    = 0
+   rvdw                           = 1.2
+   DispCorr                       = EnerPres
+   table-extension                = 1
+   fourierspacing                 = 0.16
+   fourier-nx                     = 72
+   fourier-ny                     = 52
+   fourier-nz                     = 52
+   pme-order                      = 4
+   ewald-rtol                     = 1e-05
+   ewald-rtol-lj                  = 0.001
+   lj-pme-comb-rule               = Geometric
+   ewald-geometry                 = 0
+   epsilon-surface                = 0
+   implicit-solvent               = No
+   gb-algorithm                   = Still
+   nstgbradii                     = 1
+   rgbradii                       = 1
+   gb-epsilon-solvent             = 80
+   gb-saltconc                    = 0
+   gb-obc-alpha                   = 1
+   gb-obc-beta                    = 0.8
+   gb-obc-gamma                   = 4.85
+   gb-dielectric-offset           = 0.009
+   sa-algorithm                   = Ace-approximation
+   sa-surface-tension             = 2.05016
+   tcoupl                         = V-rescale
+   nsttcouple                     = 10
+   nh-chain-length                = 0
+   print-nose-hoover-chain-variables = false
+   pcoupl                         = Parrinello-Rahman
+   pcoupltype                     = Isotropic
+   nstpcouple                     = 10
+   tau-p                          = 2
+   compressibility (3x3):
+      compressibility[    0]={ 4.50000e-05,  0.00000e+00,  0.00000e+00}
+      compressibility[    1]={ 0.00000e+00,  4.50000e-05,  0.00000e+00}
+      compressibility[    2]={ 0.00000e+00,  0.00000e+00,  4.50000e-05}
+   ref-p (3x3):
+      ref-p[    0]={ 1.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref-p[    1]={ 0.00000e+00,  1.00000e+00,  0.00000e+00}
+      ref-p[    2]={ 0.00000e+00,  0.00000e+00,  1.00000e+00}
+   refcoord-scaling               = No
+   posres-com (3):
+      posres-com[0]= 0.00000e+00
+      posres-com[1]= 0.00000e+00
+      posres-com[2]= 0.00000e+00
+   posres-comB (3):
+      posres-comB[0]= 0.00000e+00
+      posres-comB[1]= 0.00000e+00
+      posres-comB[2]= 0.00000e+00
+   QMMM                           = false
+   QMconstraints                  = 0
+   QMMMscheme                     = 0
+   MMChargeScaleFactor            = 1
+qm-opts:
+   ngQM                           = 0
+   constraint-algorithm           = Lincs
+   continuation                   = true
+   Shake-SOR                      = false
+   shake-tol                      = 0.0001
+   lincs-order                    = 4
+   lincs-iter                     = 1
+   lincs-warnangle                = 30
+   nwall                          = 0
+   wall-type                      = 9-3
+   wall-r-linpot                  = -1
+   wall-atomtype[0]               = -1
+   wall-atomtype[1]               = -1
+   wall-density[0]                = 0
+   wall-density[1]                = 0
+   wall-ewald-zfac                = 3
+   pull                           = false
+   awh                            = false
+   rotation                       = false
+   interactiveMD                  = false
+   disre                          = No
+   disre-weighting                = Conservative
+   disre-mixed                    = false
+   dr-fc                          = 1000
+   dr-tau                         = 0
+   nstdisreout                    = 100
+   orire-fc                       = 0
+   orire-tau                      = 0
+   nstorireout                    = 100
+   free-energy                    = no
+   cos-acceleration               = 0
+   deform (3x3):
+      deform[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   simulated-tempering            = false
+   swapcoords                     = no
+   userint1                       = 0
+   userint2                       = 0
+   userint3                       = 0
+   userint4                       = 0
+   userreal1                      = 0
+   userreal2                      = 0
+   userreal3                      = 0
+   userreal4                      = 0
+   applied-forces:
+     electric-field:
+       x:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+       y:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+       z:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+grpopts:
+   nrdf:      8977.8      128613
+   ref-t:         300         300
+   tau-t:         0.1         0.1
+annealing:          No          No
+annealing-npoints:           0           0
+   acc:	           0           0           0
+   nfreeze:           N           N           N
+   energygrp-flags[  0]: 0
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+The -multi flag is deprecated, and may be removed in a future version. Please update your workflows to use -multidir instead.
+
+This is simulation 6 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+System total charge: -0.482
+Will do PME sum in reciprocal space for electrostatic interactions.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+U. Essmann, L. Perera, M. L. Berkowitz, T. Darden, H. Lee and L. G. Pedersen 
+A smooth particle mesh Ewald method
+J. Chem. Phys. 103 (1995) pp. 8577-8592
+-------- -------- --- Thank You --- -------- --------
+
+Using a Gaussian width (1/beta) of 0.384195 nm for Ewald
+Potential shift: LJ r^-12: -1.122e-01 r^-6: -3.349e-01, Ewald -8.333e-06
+Initialized non-bonded Ewald correction tables, spacing: 1.02e-03 size: 1176
+
+Long Range LJ corr.: <C6> 3.0207e-04
+Generated table with 1170 data points for Ewald.
+Tabscale = 500 points/nm
+Generated table with 1170 data points for LJ6.
+Tabscale = 500 points/nm
+Generated table with 1170 data points for LJ12.
+Tabscale = 500 points/nm
+Generated table with 1170 data points for 1-4 COUL.
+Tabscale = 500 points/nm
+Generated table with 1170 data points for 1-4 LJ6.
+Tabscale = 500 points/nm
+Generated table with 1170 data points for 1-4 LJ12.
+Tabscale = 500 points/nm
+
+Using GPU 8x8 nonbonded short-range kernels
+
+Using a dual 8x4 pair-list setup updated with dynamic, rolling pruning:
+  outer list: updated every 100 steps, buffer 0.141 nm, rlist 1.341 nm
+  inner list: updated every  12 steps, buffer 0.003 nm, rlist 1.203 nm
+At tolerance 0.005 kJ/mol/ps per atom, equivalent classical 1x1 list would be:
+  outer list: updated every 100 steps, buffer 0.294 nm, rlist 1.494 nm
+  inner list: updated every  12 steps, buffer 0.053 nm, rlist 1.253 nm
+
+Using Lorentz-Berthelot Lennard-Jones combination rule
+
+
+Initializing LINear Constraint Solver
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess
+P-LINCS: A Parallel Linear Constraint Solver for molecular simulation
+J. Chem. Theory Comput. 4 (2008) pp. 116-122
+-------- -------- --- Thank You --- -------- --------
+
+The number of constraints is 4558
+3 constraints are involved in constraint triangles,
+will apply an additional matrix expansion of order 4 for couplings
+between constraints inside triangles
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Miyamoto and P. A. Kollman
+SETTLE: An Analytical Version of the SHAKE and RATTLE Algorithms for Rigid
+Water Models
+J. Comp. Chem. 13 (1992) pp. 952-962
+-------- -------- --- Thank You --- -------- --------
+
+
+Intra-simulation communication will occur every 10 steps.
+Center of mass motion removal mode is Linear
+We have the following groups for center of mass motion removal:
+  0:  rest
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+G. Bussi, D. Donadio and M. Parrinello
+Canonical sampling through velocity rescaling
+J. Chem. Phys. 126 (2007) pp. 014101
+-------- -------- --- Thank You --- -------- --------
+
+There are: 68820 Atoms
+
+Initializing Replica Exchange
+Repl  There are 20 replicas:
+Multi-checking the number of atoms ... OK
+Multi-checking the integrator ... OK
+Multi-checking init_step+nsteps ... OK
+Multi-checking first exchange step: init_step/-replex ... OK
+Multi-checking the temperature coupling ... OK
+Multi-checking the number of temperature coupling groups ... OK
+Multi-checking the pressure coupling ... OK
+Multi-checking free energy ... OK
+Multi-checking number of lambda states ... OK
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+Y. Sugita, Y. Okamoto
+Replica-exchange molecular dynamics method for protein folding
+Chem. Phys. Lett. 314 (1999) pp. 141-151
+-------- -------- --- Thank You --- -------- --------
+
+Repl  Using Constant Pressure REMD.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+T. Okabe and M. Kawata and Y. Okamoto and M. Mikami
+Replica-exchange {M}onte {C}arlo method for the isobaric-isothermal ensemble
+Chem. Phys. Lett. 335 (2001) pp. 435-439
+-------- -------- --- Thank You --- -------- --------
+
+
+Replica exchange in temperature
+ 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0
+
+Repl  p  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00
+Replica exchange interval: 500
+
+Replica random seed: 20423526
+Replica exchange information below: ex and x = exchange, pr = probability
+
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.5.4 (git: Unknown) compiled on May 20 2021 at 12:19:51
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/plumed-2.5.4/
+PLUMED: For installed feature, see /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/plumed-2.5.4//src/config/config.txt
+PLUMED: Molecular dynamics engine: gromacs
+PLUMED: Precision of reals: 4
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 68820
+PLUMED: GROMACS-like replica exchange is on
+PLUMED: File suffix: .6
+PLUMED: FILE: plumed.dat
+PLUMED: END FILE: plumed.dat
+PLUMED: Timestep: 0.002000
+PLUMED: KbT: 2.494339
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+Started mdrun on rank 0 Thu Feb 10 22:01:20 2022
+           Step           Time
+              0        0.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.65352e+03    1.27433e+04    4.96410e+02    4.41991e+03    2.95536e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.22246e+05   -5.01249e+03   -1.07623e+06    3.34623e+03   -8.98784e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.71270e+05   -7.27514e+05   -7.27473e+05    2.99425e+02   -1.20468e+02
+ Pressure (bar)   Constr. rmsd
+   -1.97522e+02    2.76662e-05
+
+step  200: timed with pme grid 72 52 52, coulomb cutoff 1.200: 3527.4 M-cycles
+step  400: timed with pme grid 64 48 48, coulomb cutoff 1.264: 3634.8 M-cycles
+Replica exchange at step 500 time 1.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  1.303e+00  dE_Term =  1.303e+00 (kT)
+Repl ex  0    1    2    3    4 x  5    6    7    8    9   10   11   12   13   14 x 15   16 x 17   18 x 19
+Repl pr   .03       .06       .59       .27       .26       .04       .47       1.0       1.0       .29
+
+step  600: timed with pme grid 60 44 44, coulomb cutoff 1.368: 3219.5 M-cycles
+step  800: timed with pme grid 56 40 40, coulomb cutoff 1.505: 2431.7 M-cycles
+step 1000: timed with pme grid 52 36 36, coulomb cutoff 1.672: 2485.7 M-cycles
+Replica exchange at step 1000 time 2.00000
+Repl 5 <-> 6  dE_term =  0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  1.503e-01  dE_Term =  1.503e-01 (kT)
+Repl ex  0    1    2    3    4    5 x  6    7    8    9   10   11 x 12   13   14   15   16   17   18   19
+Repl pr        .08       .04       .86       .03       .05       .05       .61       .04       .34     
+
+step 1200: timed with pme grid 44 36 32, coulomb cutoff 1.872: 2876.5 M-cycles
+step 1400: timed with pme grid 44 36 36, coulomb cutoff 1.838: 2799.3 M-cycles
+Replica exchange at step 1500 time 3.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.631e+00  dE_Term =  2.631e+00 (kT)
+Repl ex  0    1    2    3    4 x  5    6    7    8    9   10 x 11   12 x 13   14   15   16   17   18 x 19
+Repl pr   .02       .01       .76       .07       .27       .27       1.0       .09       .10       .95
+
+step 1600: timed with pme grid 48 36 36, coulomb cutoff 1.685: 4412.7 M-cycles
+step 1800: timed with pme grid 52 36 36, coulomb cutoff 1.672: 2483.3 M-cycles
+step 2000: timed with pme grid 52 40 36, coulomb cutoff 1.664: 2476.8 M-cycles
+Replica exchange at step 2000 time 4.00000
+Repl 5 <-> 6  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  0.000e+00  dE_Term =  0.000e+00 (kT)
+Repl ex  0    1    2    3    4    5 x  6    7    8    9   10   11   12   13   14   15 x 16   17   18   19
+Repl pr        .00       .09       1.0       .06       .30       .11       .01       1.0       .38     
+
+step 2200: timed with pme grid 52 40 40, coulomb cutoff 1.555: 2440.9 M-cycles
+step 2400: timed with pme grid 56 40 40, coulomb cutoff 1.505: 2421.3 M-cycles
+           Step           Time
+           2500        5.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.39673e+03    1.29174e+04    5.88626e+02    4.51390e+03    2.95166e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.24619e+05   -5.03001e+03   -1.07529e+06    1.64802e+03   -8.97124e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.70481e+05   -7.26643e+05   -7.27680e+05    2.98045e+02   -1.21310e+02
+ Pressure (bar)   Constr. rmsd
+    1.68036e+02    2.52480e-05
+
+Replica exchange at step 2500 time 5.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed = -1.554e+00  dE_Term = -1.554e+00 (kT)
+Repl ex  0    1    2    3    4    5    6 x  7    8    9   10   11   12   13   14 x 15   16   17   18   19
+Repl pr   .15       .04       .21       1.0       .02       .82       .37       1.0       .00       .53
+
+step 2600: timed with pme grid 56 42 40, coulomb cutoff 1.498: 4490.2 M-cycles
+step 2800: timed with pme grid 56 42 42, coulomb cutoff 1.444: 2422.0 M-cycles
+step 3000: timed with pme grid 60 42 42, coulomb cutoff 1.433: 2433.9 M-cycles
+              optimal pme grid 56 40 40, coulomb cutoff 1.505
+Replica exchange at step 3000 time 6.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  2.957e+00  dE_Term =  2.957e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17 x 18   19
+Repl pr        .34       .17       .05       .04       .12       .05       .02       .04       1.0     
+
+Replica exchange at step 3500 time 7.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  3.057e+00  dE_Term =  3.057e+00 (kT)
+Repl ex  0 x  1    2 x  3    4    5    6    7    8 x  9   10   11   12 x 13   14   15   16   17   18   19
+Repl pr   1.0       1.0       .02       .05       1.0       .27       1.0       .18       .06       .02
+
+Replica exchange at step 4000 time 8.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  3.257e-01  dE_Term =  3.257e-01 (kT)
+Repl ex  0    1    2    3    4    5 x  6    7    8    9   10   11   12   13   14   15 x 16   17   18   19
+Repl pr        .02       .00       .72       .15       .02       .07       .02       .15       .14     
+
+Replica exchange at step 4500 time 9.00000
+Repl 6 <-> 7  dE_term =  0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed = -4.761e-01  dE_Term = -4.761e-01 (kT)
+Repl ex  0 x  1    2 x  3    4 x  5    6 x  7    8    9   10   11   12 x 13   14 x 15   16 x 17   18   19
+Repl pr   .64       1.0       1.0       1.0       .00       .17       .84       .30       1.0       .04
+
+           Step           Time
+           5000       10.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.36060e+03    1.30207e+04    5.61380e+02    4.49164e+03    2.94994e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.24270e+05   -5.01548e+03   -1.07579e+06    1.56705e+03   -8.98034e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.71035e+05   -7.26999e+05   -7.27925e+05    2.99014e+02   -1.20611e+02
+ Pressure (bar)   Constr. rmsd
+    4.21266e+01    2.54869e-05
+
+Replica exchange at step 5000 time 10.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  3.257e+00  dE_Term =  3.257e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7 x  8    9 x 10   11   12   13 x 14   15   16   17   18   19
+Repl pr        .02       .08       .04       .19       1.0       .03       .07       .05       .07     
+
+Replica exchange at step 5500 time 11.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  1.002e+00  dE_Term =  1.002e+00 (kT)
+Repl ex  0    1    2    3    4 x  5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+Repl pr   .00       .00       1.0       .37       .01       .00       .00       .01       .14       .14
+
+Replica exchange at step 6000 time 12.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  3.934e+00  dE_Term =  3.934e+00 (kT)
+Repl ex  0    1 x  2    3    4    5    6    7    8    9 x 10   11   12   13 x 14   15   16   17   18   19
+Repl pr        .76       .51       .02       .01       .98       .56       .86       .16       .05     
+
+Replica exchange at step 6500 time 13.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  4.761e-01  dE_Term =  4.761e-01 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10 x 11   12 x 13   14   15   16 x 17   18   19
+Repl pr   .01       .24       .09       .62       .03       1.0       1.0       .08       .70       .41
+
+Replica exchange at step 7000 time 14.00000
+Repl 5 <-> 6  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.806e+00  dE_Term =  2.806e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11 x 12   13 x 14   15   16   17 x 18   19
+Repl pr        .01       .23       .06       .00       .03       1.0       .51       .00       1.0     
+
+           Step           Time
+           7500       15.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.36303e+03    1.29310e+04    5.18585e+02    4.50325e+03    2.96370e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.23198e+05   -5.02425e+03   -1.07402e+06    1.56640e+03   -8.97327e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.71220e+05   -7.26107e+05   -7.28145e+05    2.99336e+02   -1.21033e+02
+ Pressure (bar)   Constr. rmsd
+    3.95237e+00    2.71194e-05
+
+Replica exchange at step 7500 time 15.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  3.959e+00  dE_Term =  3.959e+00 (kT)
+Repl ex  0 x  1    2 x  3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+Repl pr   1.0       .62       .00       .02       .03       .45       .04       .23       .10       .06
+
+Replica exchange at step 8000 time 16.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  1.804e+00  dE_Term =  1.804e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11 x 12   13   14   15   16   17 x 18   19
+Repl pr        .02       .37       .16       .06       .36       1.0       .03       .08       .90     
+
+Replica exchange at step 8500 time 17.00000
+Repl 6 <-> 7  dE_term =  0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed = -8.269e-01  dE_Term = -8.269e-01 (kT)
+Repl ex  0    1    2    3    4 x  5    6 x  7    8 x  9   10 x 11   12   13   14   15   16 x 17   18 x 19
+Repl pr   .06       .03       .03       1.0       .36       .64       .03       .88       1.0       .84
+
+Replica exchange at step 9000 time 18.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  4.560e+00  dE_Term =  4.560e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7 x  8    9   10   11   12   13 x 14   15 x 16   17 x 18   19
+Repl pr        .04       .44       .01       1.0       .00       .09       .41       .55       1.0     
+
+Replica exchange at step 9500 time 19.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  2.606e+00  dE_Term =  2.606e+00 (kT)
+Repl ex  0    1    2 x  3    4 x  5    6 x  7    8 x  9   10 x 11   12 x 13   14 x 15   16   17   18   19
+Repl pr   .03       1.0       1.0       .07       1.0       .48       1.0       1.0       .30       .11
+
+           Step           Time
+          10000       20.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.24543e+03    1.29661e+04    5.55950e+02    4.48330e+03    2.92798e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.22394e+05   -5.01567e+03   -1.07304e+06    1.68420e+03   -8.97445e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.72501e+05   -7.24944e+05   -7.28279e+05    3.01576e+02   -1.20620e+02
+ Pressure (bar)   Constr. rmsd
+   -3.10717e+01    2.55716e-05
+
+Replica exchange at step 10000 time 20.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  1.428e+00  dE_Term =  1.428e+00 (kT)
+Repl ex  0    1 x  2    3    4    5    6    7    8    9   10   11 x 12   13   14   15   16   17   18   19
+Repl pr        1.0       .01       .24       .00       .12       .41       .01       .06       .00     
+
+Replica exchange at step 10500 time 21.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  3.182e+00  dE_Term =  3.182e+00 (kT)
+Repl ex  0 x  1    2    3    4    5    6    7    8    9   10   11   12 x 13   14   15   16   17   18   19
+Repl pr   .32       .09       .03       .04       .10       .01       1.0       .55       .09       .15
+
+Replica exchange at step 11000 time 22.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  1.403e+00  dE_Term =  1.403e+00 (kT)
+Repl ex  0    1    2    3 x  4    5 x  6    7    8    9   10   11   12   13   14   15   16   17 x 18   19
+Repl pr        .23       1.0       .25       .00       .07       .61       .02       .13       .26     
+
+Replica exchange at step 11500 time 23.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  4.661e+00  dE_Term =  4.661e+00 (kT)
+Repl ex  0 x  1    2 x  3    4    5    6    7    8    9   10   11   12   13   14   15   16 x 17   18   19
+Repl pr   .74       1.0       .04       .01       .33       .13       .00       .22       .58       .13
+
+Replica exchange at step 12000 time 24.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  2.857e+00  dE_Term =  2.857e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15 x 16   17 x 18   19
+Repl pr        .31       .04       .06       .05       .03       .14       .00       .07       .33     
+
+           Step           Time
+          12500       25.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.60722e+03    1.28194e+04    5.02592e+02    4.47333e+03    2.95307e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.24043e+05   -5.02458e+03   -1.07527e+06    1.56146e+03   -8.97759e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.72874e+05   -7.24885e+05   -7.28532e+05    3.02229e+02   -1.21049e+02
+ Pressure (bar)   Constr. rmsd
+    3.77114e+01    2.65615e-05
+
+Replica exchange at step 12500 time 25.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  3.859e+00  dE_Term =  3.859e+00 (kT)
+Repl ex  0 x  1    2    3    4 x  5    6    7    8    9   10 x 11   12   13   14 x 15   16 x 17   18   19
+Repl pr   1.0       .02       1.0       .02       .30       1.0       .00       .27       1.0       .07
+
+Replica exchange at step 13000 time 26.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  2.856e+00  dE_Term =  2.856e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9 x 10   11   12   13   14   15   16   17   18   19
+Repl pr        .05       .16       .06       .20       1.0       .17       .43       .10       .25     
+
+Replica exchange at step 13500 time 27.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed = -2.255e-01  dE_Term = -2.255e-01 (kT)
+Repl ex  0    1    2    3    4 x  5    6 x  7    8 x  9   10   11   12 x 13   14 x 15   16 x 17   18 x 19
+Repl pr   .01       .09       1.0       1.0       1.0       .02       1.0       1.0       .90       1.0
+
+Replica exchange at step 14000 time 28.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  1.929e+00  dE_Term =  1.929e+00 (kT)
+Repl ex  0    1    2    3 x  4    5    6    7    8    9 x 10   11   12   13   14   15   16   17   18   19
+Repl pr        .15       .05       .15       .16       .78       .07       .00       .16       .05     
+
+Replica exchange at step 14500 time 29.00000
+Repl 6 <-> 7  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed = -3.358e+00  dE_Term = -3.358e+00 (kT)
+Repl ex  0    1    2    3    4    5    6 x  7    8    9   10   11   12 x 13   14 x 15   16 x 17   18 x 19
+Repl pr   .00       .01       .00       1.0       .02       .07       1.0       1.0       .47       .80
+
+           Step           Time
+          15000       30.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.44213e+03    1.28630e+04    4.88099e+02    4.45240e+03    2.94673e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.22872e+05   -5.01895e+03   -1.07460e+06    1.66189e+03   -8.98372e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.71291e+05   -7.27081e+05   -7.28730e+05    2.99460e+02   -1.20778e+02
+ Pressure (bar)   Constr. rmsd
+   -1.73662e+01    2.54153e-05
+
+Replica exchange at step 15000 time 30.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  9.020e-01  dE_Term =  9.020e-01 (kT)
+Repl ex  0    1    2    3 x  4    5 x  6    7 x  8    9 x 10   11 x 12   13   14   15 x 16   17   18   19
+Repl pr        .65       .51       .41       1.0       .33       1.0       .22       .47       .24     
+
+Replica exchange at step 15500 time 31.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  3.984e+00  dE_Term =  3.984e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8 x  9   10   11   12   13   14 x 15   16   17   18   19
+Repl pr   .01       .01       .03       .02       1.0       .06       .01       1.0       .01       .24
+
+Replica exchange at step 16000 time 32.00000
+Repl 5 <-> 6  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed = -2.180e+00  dE_Term = -2.180e+00 (kT)
+Repl ex  0    1    2    3    4    5 x  6    7    8    9   10   11   12   13   14   15 x 16   17   18   19
+Repl pr        .06       .02       1.0       .02       .02       .01       .33       .59       .04     
+
+Replica exchange at step 16500 time 33.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  4.560e+00  dE_Term =  4.560e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8 x  9   10   11   12 x 13   14   15   16 x 17   18   19
+Repl pr   .02       .02       .08       .01       1.0       .05       .16       .01       .33       .01
+
+Writing checkpoint, step 16700 at Thu Feb 10 22:06:24 2022
+
+
+Replica exchange at step 17000 time 34.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed = -3.007e-01  dE_Term = -3.007e-01 (kT)
+Repl ex  0    1    2    3 x  4    5 x  6    7    8    9   10   11   12   13 x 14   15   16   17   18   19
+Repl pr        .01       1.0       1.0       .65       .06       .03       1.0       .03       .51     
+
+           Step           Time
+          17500       35.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.25714e+03    1.28621e+04    5.41354e+02    4.47509e+03    2.94153e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.21937e+05   -5.01276e+03   -1.07188e+06    1.60265e+03   -8.96806e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.70738e+05   -7.26069e+05   -7.28869e+05    2.98493e+02   -1.20480e+02
+ Pressure (bar)   Constr. rmsd
+   -7.82267e+01    2.65151e-05
+
+Replica exchange at step 17500 time 35.00000
+Repl 6 <-> 7  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed = -1.654e+00  dE_Term = -1.654e+00 (kT)
+Repl ex  0    1    2    3    4    5    6 x  7    8    9   10   11   12   13   14   15   16   17   18   19
+Repl pr   .02       .08       .14       1.0       .02       .04       .01       .23       .09       .11
+
+Replica exchange at step 18000 time 36.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  2.706e+00  dE_Term =  2.706e+00 (kT)
+Repl ex  0    1    2    3 x  4    5    6    7 x  8    9 x 10   11 x 12   13 x 14   15   16   17 x 18   19
+Repl pr        .09       1.0       .07       1.0       1.0       1.0       1.0       .39       .50     
+
+Replica exchange at step 18500 time 37.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  1.854e+00  dE_Term =  1.854e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+Repl pr   .17       .15       .21       .16       .31       .01       .10       .10       .04       .03
+
+Replica exchange at step 19000 time 38.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  4.360e+00  dE_Term =  4.360e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11   12   13 x 14   15 x 16   17 x 18   19
+Repl pr        .72       .29       .01       .16       .01       .19       1.0       1.0       1.0     
+
+Replica exchange at step 19500 time 39.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed = -1.102e+00  dE_Term = -1.102e+00 (kT)
+Repl ex  0    1    2 x  3    4 x  5    6 x  7    8 x  9   10   11   12   13   14   15   16   17   18 x 19
+Repl pr   .26       1.0       .38       1.0       1.0       .12       .05       .07       .36       1.0
+
+           Step           Time
+          20000       40.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.09845e+03    1.29242e+04    5.58457e+02    4.46447e+03    2.95048e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.22771e+05   -5.01390e+03   -1.07397e+06    1.58999e+03   -8.98070e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.70498e+05   -7.27572e+05   -7.29016e+05    2.98074e+02   -1.20535e+02
+ Pressure (bar)   Constr. rmsd
+   -3.69619e+01    2.52657e-05
+
+Replica exchange at step 20000 time 40.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  4.184e+00  dE_Term =  4.184e+00 (kT)
+Repl ex  0    1 x  2    3    4    5 x  6    7    8    9   10   11   12   13 x 14   15 x 16   17   18   19
+Repl pr        .13       .02       .02       .33       .04       .02       .51       1.0       .10     
+
+Replica exchange at step 20500 time 41.00000
+Repl 6 <-> 7  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  3.633e+00  dE_Term =  3.633e+00 (kT)
+Repl ex  0    1    2 x  3    4    5    6    7    8    9   10   11   12   13   14   15   16 x 17   18   19
+Repl pr   .10       .48       .06       .03       .04       .10       .30       .02       1.0       .20
+
+Replica exchange at step 21000 time 42.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed = -3.733e+00  dE_Term = -3.733e+00 (kT)
+Repl ex  0    1 x  2    3 x  4    5 x  6    7 x  8    9   10   11   12   13   14   15   16   17   18   19
+Repl pr        .35       .37       1.0       .74       .04       .03       .21       .00       .01     
+
+Replica exchange at step 21500 time 43.00000
+Repl 6 <-> 7  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.230e+00  dE_Term =  2.230e+00 (kT)
+Repl ex  0    1    2    3    4    5    6 x  7    8    9   10 x 11   12 x 13   14   15   16   17   18 x 19
+Repl pr   .03       .01       .47       .11       .00       1.0       .80       .21       .01       1.0
+
+Replica exchange at step 22000 time 44.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  2.230e+00  dE_Term =  2.230e+00 (kT)
+Repl ex  0    1 x  2    3 x  4    5    6    7    8    9   10   11   12   13 x 14   15   16   17 x 18   19
+Repl pr        .32       1.0       .11       .40       .05       .01       .86       .00       1.0     
+
+           Step           Time
+          22500       45.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.09399e+03    1.29155e+04    5.33455e+02    4.45486e+03    2.94605e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.23632e+05   -5.02720e+03   -1.07679e+06    1.60793e+03   -9.00123e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.71569e+05   -7.28554e+05   -7.29386e+05    2.99948e+02   -1.21175e+02
+ Pressure (bar)   Constr. rmsd
+   -4.70419e+00    2.57148e-05
+
+Replica exchange at step 22500 time 45.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  3.257e-01  dE_Term =  3.257e-01 (kT)
+Repl ex  0 x  1    2    3    4    5    6 x  7    8    9   10 x 11   12 x 13   14 x 15   16   17   18   19
+Repl pr   1.0       .12       .04       .72       .12       1.0       1.0       .06       .07       .00
+
+Replica exchange at step 23000 time 46.00000
+Repl 5 <-> 6  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  1.754e-01  dE_Term =  1.754e-01 (kT)
+Repl ex  0    1 x  2    3    4    5 x  6    7 x  8    9   10   11   12   13   14   15   16   17 x 18   19
+Repl pr        .93       .01       .84       .51       .02       .04       .04       .12       1.0     
+
+Replica exchange at step 23500 time 47.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.055e+00  dE_Term =  2.055e+00 (kT)
+Repl ex  0    1    2 x  3    4    5    6    7    8 x  9   10   11   12   13   14   15   16 x 17   18   19
+Repl pr   .00       .88       .01       .13       .95       .09       .27       .05       1.0       .20
+
+Replica exchange at step 24000 time 48.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  9.522e-01  dE_Term =  9.522e-01 (kT)
+Repl ex  0    1    2    3    4    5 x  6    7    8    9 x 10   11   12   13 x 14   15   16   17 x 18   19
+Repl pr        .01       .05       .39       .01       1.0       .01       .82       .00       1.0     
+
+Replica exchange at step 24500 time 49.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  4.210e+00  dE_Term =  4.210e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11   12 x 13   14   15   16   17   18   19
+Repl pr   .00       .01       .05       .01       .07       .18       1.0       .22       .11       .01
+
+           Step           Time
+          25000       50.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.23441e+03    1.28495e+04    4.93803e+02    4.47591e+03    2.97468e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.25054e+05   -5.02338e+03   -1.07765e+06    1.64374e+03   -8.99175e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.71757e+05   -7.27417e+05   -7.29412e+05    3.00277e+02   -1.20991e+02
+ Pressure (bar)   Constr. rmsd
+    1.85724e+02    2.50837e-05
+
+Replica exchange at step 25000 time 50.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.505e-02  dE_Term =  2.505e-02 (kT)
+Repl ex  0    1    2    3 x  4    5 x  6    7    8    9 x 10   11   12   13   14   15   16   17 x 18   19
+Repl pr        .01       .61       .98       .02       1.0       .01       .11       .04       1.0     
+
+Replica exchange at step 25500 time 51.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  4.761e-01  dE_Term =  4.761e-01 (kT)
+Repl ex  0 x  1    2    3    4    5    6 x  7    8    9   10   11   12   13   14 x 15   16   17   18 x 19
+Repl pr   .23       .69       .02       .62       .01       .01       .30       1.0       .10       1.0
+
+Replica exchange at step 26000 time 52.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  1.353e+00  dE_Term =  1.353e+00 (kT)
+Repl ex  0    1    2    3 x  4    5    6    7 x  8    9   10   11 x 12   13 x 14   15   16   17 x 18   19
+Repl pr        .28       1.0       .26       1.0       .59       .67       .43       .01       1.0     
+
+Replica exchange at step 26500 time 53.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  3.658e+00  dE_Term =  3.658e+00 (kT)
+Repl ex  0    1    2 x  3    4    5    6    7    8 x  9   10 x 11   12   13   14 x 15   16 x 17   18   19
+Repl pr   .37       1.0       .59       .03       .76       1.0       .21       1.0       1.0       .10
+
+Replica exchange at step 27000 time 54.00000
+Repl 5 <-> 6  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  1.704e+00  dE_Term =  1.704e+00 (kT)
+Repl ex  0    1 x  2    3    4    5 x  6    7    8    9   10   11 x 12   13   14   15   16   17 x 18   19
+Repl pr        .80       .03       .18       .05       .01       1.0       .04       .01       1.0     
+
+           Step           Time
+          27500       55.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.30473e+03    1.29483e+04    5.39640e+02    4.37876e+03    2.93208e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.22745e+05   -5.02339e+03   -1.07442e+06    1.58499e+03   -8.98625e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.70475e+05   -7.28150e+05   -7.29633e+05    2.98034e+02   -1.20992e+02
+ Pressure (bar)   Constr. rmsd
+   -8.65943e+01    2.72248e-05
+
+Replica exchange at step 27500 time 55.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  7.692e+00  dE_Term =  7.692e+00 (kT)
+Repl ex  0    1    2 x  3    4    5    6    7    8    9   10   11   12   13   14 x 15   16 x 17   18   19
+Repl pr   .53       .29       .13       .00       .33       .03       .01       .98       1.0       .08
+
+Replica exchange at step 28000 time 56.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  7.266e-01  dE_Term =  7.266e-01 (kT)
+Repl ex  0    1    2    3 x  4    5    6    7    8    9   10   11   12   13   14   15 x 16   17   18   19
+Repl pr        .07       .10       .48       .07       .13       .09       .32       1.0       .03     
+
+Replica exchange at step 28500 time 57.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  1.002e-01  dE_Term =  1.002e-01 (kT)
+Repl ex  0    1    2 x  3    4    5    6 x  7    8    9   10   11   12 x 13   14   15   16   17   18   19
+Repl pr   .01       1.0       .01       .90       .01       .03       .04       .05       .01       .32
+
+Replica exchange at step 29000 time 58.00000
+Repl 5 <-> 6  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  1.779e+00  dE_Term =  1.779e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+Repl pr        .02       .07       .17       .06       .03       .10       .19       .17       .04     
+
+Replica exchange at step 29500 time 59.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.405e+00  dE_Term =  2.405e+00 (kT)
+Repl ex  0    1    2 x  3    4    5    6    7    8    9   10   11   12 x 13   14   15   16   17   18   19
+Repl pr   .01       1.0       .01       .09       .04       .01       1.0       .32       .04       .04
+
+           Step           Time
+          30000       60.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.28087e+03    1.28225e+04    6.13081e+02    4.50973e+03    2.96311e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.21326e+05   -5.00953e+03   -1.07258e+06    1.61504e+03   -8.97792e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.71567e+05   -7.26225e+05   -7.29894e+05    2.99944e+02   -1.20325e+02
+ Pressure (bar)   Constr. rmsd
+   -1.88380e+02    2.53685e-05
+
+Replica exchange at step 30000 time 60.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  2.982e+00  dE_Term =  2.982e+00 (kT)
+Repl ex  0    1 x  2    3 x  4    5    6    7    8    9   10   11 x 12   13 x 14   15   16   17 x 18   19
+Repl pr        .62       .59       .05       .04       .06       .43       .23       .05       1.0     
+
+Replica exchange at step 30500 time 61.00000
+Repl 6 <-> 7  dE_term =  0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  7.267e-01  dE_Term =  7.267e-01 (kT)
+Repl ex  0 x  1    2    3    4    5    6    7    8    9   10 x 11   12   13   14   15   16   17   18   19
+Repl pr   .93       .06       .10       .48       .02       .08       .03       .03       .23       .05
+
+Replica exchange at step 31000 time 62.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.706e+00  dE_Term =  2.706e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9 x 10   11 x 12   13   14   15   16   17   18   19
+Repl pr        .06       .01       .07       .13       .48       .03       .02       .07       .07     
+
+Replica exchange at step 31500 time 63.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed = -2.030e+00  dE_Term = -2.030e+00 (kT)
+Repl ex  0    1    2 x  3    4    5    6 x  7    8    9   10   11   12 x 13   14   15   16   17   18 x 19
+Repl pr   .10       1.0       .03       1.0       .02       .21       1.0       .04       .04       .29
+
+Replica exchange at step 32000 time 64.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  2.080e+00  dE_Term =  2.080e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17 x 18   19
+Repl pr        .07       .09       .12       .01       .22       .01       .01       .29       1.0     
+
+           Step           Time
+          32500       65.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.34986e+03    1.30117e+04    5.36064e+02    4.41365e+03    2.94851e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.22080e+05   -5.03897e+03   -1.07423e+06    1.65309e+03   -8.98741e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.70882e+05   -7.27859e+05   -7.30051e+05    2.98745e+02   -1.21743e+02
+ Pressure (bar)   Constr. rmsd
+   -1.34944e+02    2.60747e-05
+
+Replica exchange at step 32500 time 65.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  6.840e+00  dE_Term =  6.840e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18 x 19
+Repl pr   .02       .05       .38       .00       .08       .05       .12       .11       .36       1.0
+
+Replica exchange at step 33000 time 66.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  1.954e+00  dE_Term =  1.954e+00 (kT)
+Repl ex  0    1    2    3 x  4    5    6    7    8    9 x 10   11   12   13   14   15   16   17   18   19
+Repl pr        .02       .95       .14       .20       .80       .17       .01       .03       .51     
+
+Writing checkpoint, step 33100 at Thu Feb 10 22:11:23 2022
+
+
+Replica exchange at step 33500 time 67.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  1.228e+00  dE_Term =  1.228e+00 (kT)
+Repl ex  0    1    2 x  3    4    5    6    7    8 x  9   10   11   12   13   14   15   16   17   18 x 19
+Repl pr   .03       1.0       .00       .29       1.0       .56       .02       .09       .24       .56
+
+Replica exchange at step 34000 time 68.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  3.458e+00  dE_Term =  3.458e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11 x 12   13   14   15   16   17   18   19
+Repl pr        .29       .00       .03       .02       .17       .23       .01       .10       .03     
+
+Replica exchange at step 34500 time 69.00000
+Repl 6 <-> 7  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed = -1.554e+00  dE_Term = -1.554e+00 (kT)
+Repl ex  0 x  1    2    3    4    5    6 x  7    8 x  9   10   11   12   13   14   15   16   17   18 x 19
+Repl pr   .69       .00       .01       1.0       1.0       .01       .05       .09       .56       .20
+
+           Step           Time
+          35000       70.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.07365e+03    1.29028e+04    5.64785e+02    4.38339e+03    2.95890e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.25999e+05   -5.02417e+03   -1.07870e+06    1.57222e+03   -8.99635e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.71555e+05   -7.28080e+05   -7.30312e+05    2.99922e+02   -1.21029e+02
+ Pressure (bar)   Constr. rmsd
+    1.02225e+02    2.69027e-05
+
+Replica exchange at step 35000 time 70.00000
+Repl 5 <-> 6  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  4.385e+00  dE_Term =  4.385e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15 x 16   17   18   19
+Repl pr        .05       .06       .01       .20       .00       .15       .22       1.0       .16     
+
+Replica exchange at step 35500 time 71.00000
+Repl 6 <-> 7  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  1.829e+00  dE_Term =  1.829e+00 (kT)
+Repl ex  0 x  1    2 x  3    4    5    6    7    8    9   10   11   12   13   14 x 15   16 x 17   18   19
+Repl pr   1.0       .82       .32       .16       .04       .27       .06       .69       1.0       .16
+
+Replica exchange at step 36000 time 72.00000
+Repl 5 <-> 6  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.030e+00  dE_Term =  2.030e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+Repl pr        .29       .09       .13       .01       .09       .09       .00       .03       .10     
+
+Replica exchange at step 36500 time 73.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  8.093e+00  dE_Term =  8.093e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10 x 11   12 x 13   14 x 15   16 x 17   18   19
+Repl pr   .14       .04       .01       .00       .04       .12       1.0       1.0       1.0       .02
+
+Replica exchange at step 37000 time 74.00000
+Repl 5 <-> 6  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.806e+00  dE_Term =  2.806e+00 (kT)
+Repl ex  0    1 x  2    3    4    5    6    7 x  8    9   10   11   12   13 x 14   15   16   17   18   19
+Repl pr        .62       .01       .06       .95       .02       .08       .20       .19       .00     
+
+           Step           Time
+          37500       75.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.27369e+03    1.28076e+04    5.08282e+02    4.49600e+03    2.96060e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.24950e+05   -5.01653e+03   -1.07677e+06    1.62854e+03   -8.98516e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.72214e+05   -7.26302e+05   -7.30496e+05    3.01074e+02   -1.20662e+02
+ Pressure (bar)   Constr. rmsd
+    1.00471e+02    2.54839e-05
+
+Replica exchange at step 37500 time 75.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  8.519e-01  dE_Term =  8.519e-01 (kT)
+Repl ex  0    1    2    3    4    5    6 x  7    8    9   10 x 11   12   13   14   15   16 x 17   18 x 19
+Repl pr   .00       .01       .23       .43       .01       .76       .00       .05       1.0       1.0
+
+Replica exchange at step 38000 time 76.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  2.806e+00  dE_Term =  2.806e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7 x  8    9   10   11   12   13   14   15 x 16   17   18   19
+Repl pr        .13       .00       .06       1.0       .03       .02       .01       1.0       .12     
+
+Replica exchange at step 38500 time 77.00000
+Repl 6 <-> 7  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  1.153e+00  dE_Term =  1.153e+00 (kT)
+Repl ex  0 x  1    2    3    4    5    6    7    8 x  9   10   11   12   13   14   15   16   17   18 x 19
+Repl pr   .09       .04       .02       .32       1.0       .15       .07       .02       .13       1.0
+
+Replica exchange at step 39000 time 78.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  4.961e+00  dE_Term =  4.961e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15 x 16   17 x 18   19
+Repl pr        .05       .25       .01       .01       .02       .15       .02       1.0       1.0     
+
+           Step           Time
+          39100       78.20000
+
+Writing checkpoint, step 39100 at Thu Feb 10 22:13:15 2022
+
+
+
+
+-----------------------------------------------------------
+Restarting from checkpoint, appending to previous log file.
+
+Log file opened on Thu Feb 10 22:21:28 2022
+Host: stxcompute078  pid: 12559  rank ID: 0  number of ranks:  1
+                      :-) GROMACS - gmx mdrun, 2018.8 (-:
+
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi mdrun -cpi -cpt 5 -maxh 0.1 -plumed plumed.dat -replex 500 -hrex -multi 20
+
+GROMACS version:    2018.8
+Precision:          single
+Memory model:       64 bit
+MPI library:        MPI
+OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 64)
+GPU support:        CUDA
+SIMD instructions:  NONE
+FFT library:        fftw-3.3.8
+RDTSCP usage:       enabled
+TNG support:        enabled
+Hwloc support:      disabled
+Tracing support:    disabled
+Built on:           2021-05-20 16:28:38
+Built by:           utsab.shrestha@stxfrontend001 [CMAKE]
+Build OS/arch:      Linux 4.15.0-128-generic x86_64
+Build CPU vendor:   Unknown
+Build CPU brand:    Unknown
+Build CPU family:   0   Model: 0   Stepping: 0
+Build CPU features: Unknown
+C compiler:         /usr/bin/cc GNU 7.5.0
+C compiler flags:    -pthread    -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast  
+C++ compiler:       /usr/bin/c++ GNU 7.5.0
+C++ compiler flags:  -pthread   -std=c++11   -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast  
+CUDA compiler:      /usr/local/cuda/bin/nvcc nvcc: NVIDIA (R) Cuda compiler driver;Copyright (c) 2005-2019 NVIDIA Corporation;Built on Wed_Oct_23_19:24:38_PDT_2019;Cuda compilation tools, release 10.2, V10.2.89
+CUDA compiler flags:-gencode;arch=compute_30,code=sm_30;-gencode;arch=compute_35,code=sm_35;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_52,code=sm_52;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=compute_75;-use_fast_math;-D_FORCE_INLINES;; ;-pthread;-std=c++11;-O3;-DNDEBUG;-funroll-all-loops;-fexcess-precision=fast;
+CUDA driver:        11.20
+CUDA runtime:       10.20
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+The -multi flag is deprecated, and may be removed in a future version. Please update your workflows to use -multidir instead.
+
+This is simulation 6 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+System total charge: -0.482
+Will do PME sum in reciprocal space for electrostatic interactions.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+U. Essmann, L. Perera, M. L. Berkowitz, T. Darden, H. Lee and L. G. Pedersen 
+A smooth particle mesh Ewald method
+J. Chem. Phys. 103 (1995) pp. 8577-8592
+-------- -------- --- Thank You --- -------- --------
+
+Using a Gaussian width (1/beta) of 0.384195 nm for Ewald
+Potential shift: LJ r^-12: -1.122e-01 r^-6: -3.349e-01, Ewald -8.333e-06
+Initialized non-bonded Ewald correction tables, spacing: 1.02e-03 size: 1176
+
+Long Range LJ corr.: <C6> 3.0207e-04
+Generated table with 1170 data points for Ewald.
+Tabscale = 500 points/nm
+Generated table with 1170 data points for LJ6.
+Tabscale = 500 points/nm
+Generated table with 1170 data points for LJ12.
+Tabscale = 500 points/nm
+Generated table with 1170 data points for 1-4 COUL.
+Tabscale = 500 points/nm
+Generated table with 1170 data points for 1-4 LJ6.
+Tabscale = 500 points/nm
+Generated table with 1170 data points for 1-4 LJ12.
+Tabscale = 500 points/nm
+
+Using GPU 8x8 nonbonded short-range kernels
+
+Using a dual 8x4 pair-list setup updated with dynamic, rolling pruning:
+  outer list: updated every 100 steps, buffer 0.141 nm, rlist 1.341 nm
+  inner list: updated every  12 steps, buffer 0.004 nm, rlist 1.204 nm
+At tolerance 0.005 kJ/mol/ps per atom, equivalent classical 1x1 list would be:
+  outer list: updated every 100 steps, buffer 0.294 nm, rlist 1.494 nm
+  inner list: updated every  12 steps, buffer 0.053 nm, rlist 1.253 nm
+
+Using Lorentz-Berthelot Lennard-Jones combination rule
+
+
+Initializing LINear Constraint Solver
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess
+P-LINCS: A Parallel Linear Constraint Solver for molecular simulation
+J. Chem. Theory Comput. 4 (2008) pp. 116-122
+-------- -------- --- Thank You --- -------- --------
+
+The number of constraints is 4558
+3 constraints are involved in constraint triangles,
+will apply an additional matrix expansion of order 4 for couplings
+between constraints inside triangles
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Miyamoto and P. A. Kollman
+SETTLE: An Analytical Version of the SHAKE and RATTLE Algorithms for Rigid
+Water Models
+J. Comp. Chem. 13 (1992) pp. 952-962
+-------- -------- --- Thank You --- -------- --------
+
+
+Intra-simulation communication will occur every 10 steps.
+Center of mass motion removal mode is Linear
+We have the following groups for center of mass motion removal:
+  0:  rest
+There are: 68820 Atoms
+
+Initializing Replica Exchange
+Repl  There are 20 replicas:
+Multi-checking the number of atoms ... OK
+Multi-checking the integrator ... OK
+Multi-checking init_step+nsteps ... OK
+Multi-checking first exchange step: init_step/-replex ... OK
+Multi-checking the temperature coupling ... OK
+Multi-checking the number of temperature coupling groups ... OK
+Multi-checking the pressure coupling ... OK
+Multi-checking free energy ... OK
+Multi-checking number of lambda states ... OK
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+Y. Sugita, Y. Okamoto
+Replica-exchange molecular dynamics method for protein folding
+Chem. Phys. Lett. 314 (1999) pp. 141-151
+-------- -------- --- Thank You --- -------- --------
+
+Repl  Using Constant Pressure REMD.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+T. Okabe and M. Kawata and Y. Okamoto and M. Mikami
+Replica-exchange {M}onte {C}arlo method for the isobaric-isothermal ensemble
+Chem. Phys. Lett. 335 (2001) pp. 435-439
+-------- -------- --- Thank You --- -------- --------
+
+
+Replica exchange in temperature
+ 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0 300.0
+
+Repl  p  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00
+Replica exchange interval: 500
+
+Replica random seed: -2115052648
+Replica exchange information below: ex and x = exchange, pr = probability
+
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.5.4 (git: Unknown) compiled on May 20 2021 at 12:19:51
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/plumed-2.5.4/
+PLUMED: For installed feature, see /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/plumed-2.5.4//src/config/config.txt
+PLUMED: Molecular dynamics engine: gromacs
+PLUMED: Precision of reals: 4
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 68820
+PLUMED: GROMACS-like replica exchange is on
+PLUMED: File suffix: .6
+PLUMED: FILE: plumed.dat
+PLUMED: END FILE: plumed.dat
+PLUMED: Timestep: 0.002000
+PLUMED: KbT: 2.494339
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+Started mdrun on rank 0 Thu Feb 10 22:21:37 2022
+step 39300: timed with pme grid 72 52 52, coulomb cutoff 1.200: 4575.8 M-cycles
+step 39500: timed with pme grid 64 48 48, coulomb cutoff 1.262: 4792.2 M-cycles
+Replica exchange at step 39500 time 79.00000
+Repl 6 <-> 7  dE_term =  0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  1.528e+00  dE_Term =  1.528e+00 (kT)
+Repl ex  0 x  1    2    3    4    5    6    7    8 x  9   10   11   12 x 13   14   15   16 x 17   18   19
+Repl pr   .76       .01       .01       .22       1.0       .50       1.0       .06       .22       .06
+
+step 39700: timed with pme grid 60 44 44, coulomb cutoff 1.366: 3745.3 M-cycles
+step 39900: timed with pme grid 56 40 40, coulomb cutoff 1.503: 3595.8 M-cycles
+           Step           Time
+          40000       80.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.29309e+03    1.28027e+04    5.49222e+02    4.44770e+03    2.93790e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.23768e+05   -5.02530e+03   -1.07448e+06    1.18613e+03   -8.98077e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.72105e+05   -7.25972e+05   -7.30772e+05    3.00884e+02   -1.21084e+02
+ Pressure (bar)   Constr. rmsd
+    3.84915e+01    2.57266e-05
+
+Replica exchange at step 40000 time 80.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.982e+00  dE_Term =  2.982e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7 x  8    9   10   11   12   13   14   15   16   17   18   19
+Repl pr        .01       .25       .05       .48       .15       .00       .34       .06       .10     
+
+step 40100: timed with pme grid 52 36 36, coulomb cutoff 1.670: 4079.2 M-cycles
+step 40300: timed with pme grid 52 40 36, coulomb cutoff 1.662: 3545.4 M-cycles
+step 40500: timed with pme grid 52 40 40, coulomb cutoff 1.553: 3506.4 M-cycles
+Replica exchange at step 40500 time 81.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  1.554e+00  dE_Term =  1.554e+00 (kT)
+Repl ex  0 x  1    2    3    4 x  5    6    7    8    9   10   11   12 x 13   14   15   16   17   18 x 19
+Repl pr   1.0       .13       .82       .21       .16       .06       1.0       .00       .29       .48
+
+step 40700: timed with pme grid 56 40 40, coulomb cutoff 1.503: 3700.5 M-cycles
+step 40900: timed with pme grid 56 42 40, coulomb cutoff 1.496: 3718.4 M-cycles
+Replica exchange at step 41000 time 82.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  5.287e+00  dE_Term =  5.287e+00 (kT)
+Repl ex  0    1 x  2    3    4    5    6    7    8    9 x 10   11 x 12   13   14   15 x 16   17   18   19
+Repl pr        .98       .11       .01       .05       .01       1.0       .08       1.0       .03     
+
+step 41100: timed with pme grid 56 42 42, coulomb cutoff 1.442: 3659.0 M-cycles
+step 41300: timed with pme grid 60 42 42, coulomb cutoff 1.431: 3662.9 M-cycles
+step 41500: timed with pme grid 60 44 44, coulomb cutoff 1.366: 3862.8 M-cycles
+Replica exchange at step 41500 time 83.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed = -8.519e-01  dE_Term = -8.519e-01 (kT)
+Repl ex  0    1    2    3    4    5    6 x  7    8 x  9   10   11   12   13   14   15   16   17   18 x 19
+Repl pr   .04       .00       .30       1.0       .51       .16       .00       .69       .21       1.0
+
+step 41700: timed with pme grid 60 48 48, coulomb cutoff 1.346: 3487.5 M-cycles
+              optimal pme grid 60 48 48, coulomb cutoff 1.346
+Replica exchange at step 42000 time 84.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  3.007e-01  dE_Term =  3.007e-01 (kT)
+Repl ex  0    1 x  2    3    4    5    6    7    8    9   10   11   12   13 x 14   15 x 16   17 x 18   19
+Repl pr        1.0       .06       .74       .13       .06       .35       1.0       .56       .28     
+
+           Step           Time
+          42500       85.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.44404e+03    1.29606e+04    5.40362e+02    4.52335e+03    2.93930e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.23230e+05   -5.01576e+03   -1.07478e+06    2.34686e+03   -8.97361e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.72113e+05   -7.25248e+05   -7.30885e+05    3.00898e+02   -1.20625e+02
+ Pressure (bar)   Constr. rmsd
+   -8.09040e+00    2.61433e-05
+
+Replica exchange at step 42500 time 85.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  3.483e+00  dE_Term =  3.483e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8 x  9   10 x 11   12   13   14   15   16   17   18   19
+Repl pr   .05       .00       .00       .03       1.0       1.0       .05       .04       .86       .01
+
+Replica exchange at step 43000 time 86.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.080e+00  dE_Term =  2.080e+00 (kT)
+Repl ex  0    1 x  2    3    4    5    6    7 x  8    9 x 10   11   12   13   14   15   16   17   18   19
+Repl pr        .29       .01       .12       1.0       .53       .15       .37       .03       .05     
+
+Replica exchange at step 43500 time 87.00000
+Repl 6 <-> 7  dE_term =  0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed = -2.506e-01  dE_Term = -2.506e-01 (kT)
+Repl ex  0    1    2    3    4    5    6 x  7    8 x  9   10   11   12   13   14   15   16   17   18   19
+Repl pr   .17       .13       .06       1.0       .23       .01       .04       .01       .02       .00
+
+Replica exchange at step 44000 time 88.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  3.583e+00  dE_Term =  3.583e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9 x 10   11   12   13 x 14   15   16   17 x 18   19
+Repl pr        .08       .00       .03       .07       1.0       .04       1.0       .02       .50     
+
+Replica exchange at step 44500 time 89.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed = -5.763e-01  dE_Term = -5.763e-01 (kT)
+Repl ex  0 x  1    2    3    4    5    6 x  7    8 x  9   10 x 11   12   13   14   15   16   17   18   19
+Repl pr   1.0       .00       .01       1.0       1.0       1.0       .52       .02       .13       .10
+
+           Step           Time
+          45000       90.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.49291e+03    1.28715e+04    5.46238e+02    4.40855e+03    2.96131e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.23419e+05   -5.02590e+03   -1.07568e+06    2.27600e+03   -8.98082e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.71707e+05   -7.26376e+05   -7.31090e+05    3.00188e+02   -1.21113e+02
+ Pressure (bar)   Constr. rmsd
+    1.12613e+01    2.63481e-05
+
+Replica exchange at step 45000 time 90.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  1.128e+00  dE_Term =  1.128e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11 x 12   13   14   15   16   17 x 18   19
+Repl pr        .06       .22       .32       .05       .03       1.0       .07       .26       .93     
+
+Replica exchange at step 45500 time 91.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.080e+00  dE_Term =  2.080e+00 (kT)
+Repl ex  0    1    2    3    4 x  5    6 x  7    8    9   10   11   12 x 13   14   15   16   17   18 x 19
+Repl pr   .07       .01       1.0       .12       .02       .00       1.0       .19       .05       1.0
+
+Replica exchange at step 46000 time 92.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  3.032e+00  dE_Term =  3.032e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11   12   13 x 14   15   16   17   18   19
+Repl pr        .21       .00       .05       .03       .04       .64       1.0       .01       .06     
+
+Replica exchange at step 46500 time 93.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed = -2.030e+00  dE_Term = -2.030e+00 (kT)
+Repl ex  0    1    2    3    4    5    6 x  7    8    9   10   11   12   13   14 x 15   16 x 17   18   19
+Repl pr   .16       .14       .01       1.0       .06       .00       .05       1.0       1.0       .01
+
+Replica exchange at step 47000 time 94.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  2.481e+00  dE_Term =  2.481e+00 (kT)
+Repl ex  0    1    2    3 x  4    5    6    7    8    9   10   11 x 12   13   14   15   16   17   18   19
+Repl pr        .01       1.0       .08       .05       .11       .64       .02       .11       .07     
+
+           Step           Time
+          47500       95.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.31280e+03    1.29808e+04    5.30405e+02    4.48647e+03    2.95766e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.22611e+05   -5.00925e+03   -1.07460e+06    2.32680e+03   -8.97787e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.71981e+05   -7.25806e+05   -7.31318e+05    3.00668e+02   -1.20312e+02
+ Pressure (bar)   Constr. rmsd
+   -8.64745e+01    2.64254e-05
+
+Replica exchange at step 47500 time 95.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed = -3.458e+00  dE_Term = -3.458e+00 (kT)
+Repl ex  0    1    2    3    4    5    6 x  7    8    9   10   11   12   13   14   15   16   17   18   19
+Repl pr   .05       .01       .02       1.0       .01       .03       .01       .56       .09       .33
+
+Replica exchange at step 48000 time 96.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  7.066e+00  dE_Term =  7.066e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9 x 10   11 x 12   13   14   15   16   17   18   19
+Repl pr        .00       .10       .00       .08       1.0       1.0       .03       .00       .21     
+
+Replica exchange at step 48500 time 97.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  2.355e+00  dE_Term =  2.355e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11   12   13   14 x 15   16 x 17   18   19
+Repl pr   .01       .03       .55       .09       .16       .00       .10       .39       1.0       .08
+
+Replica exchange at step 49000 time 98.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  4.034e+00  dE_Term =  4.034e+00 (kT)
+Repl ex  0    1    2    3 x  4    5    6    7    8    9 x 10   11 x 12   13   14   15 x 16   17 x 18   19
+Repl pr        .03       .18       .02       .02       .25       .37       .14       .06       .95     
+
+Replica exchange at step 49500 time 99.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  7.266e-01  dE_Term =  7.266e-01 (kT)
+Repl ex  0    1    2 x  3    4    5    6 x  7    8    9   10 x 11   12 x 13   14   15   16   17   18   19
+Repl pr   .03       1.0       .08       .48       .02       1.0       .80       .22       .22       .01
+
+           Step           Time
+          50000      100.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.40882e+03    1.29470e+04    5.07789e+02    4.47235e+03    2.95899e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.22016e+05   -5.01542e+03   -1.07330e+06    2.31020e+03   -8.97068e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.71301e+05   -7.25767e+05   -7.31508e+05    2.99478e+02   -1.20608e+02
+ Pressure (bar)   Constr. rmsd
+   -1.29245e+02    2.66172e-05
+
+Replica exchange at step 50000 time 100.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  1.879e+00  dE_Term =  1.879e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15 x 16   17 x 18   19
+Repl pr        .09       .12       .15       .10       .03       .41       .09       1.0       1.0     
+
+Replica exchange at step 50500 time 101.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  7.567e+00  dE_Term =  7.567e+00 (kT)
+Repl ex  0 x  1    2    3    4    5    6    7    8    9   10   11   12   13   14 x 15   16   17   18   19
+Repl pr   1.0       .55       .00       .00       .12       .76       .02       1.0       .18       .01
+
+Replica exchange at step 51000 time 102.00000
+Repl 5 <-> 6  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed = -2.982e+00  dE_Term = -2.982e+00 (kT)
+Repl ex  0    1    2    3    4    5 x  6    7    8    9   10   11 x 12   13 x 14   15   16   17 x 18   19
+Repl pr        .06       .22       1.0       .00       .06       .93       .15       .10       .67     
+
+Replica exchange at step 51500 time 103.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.907e+00  dE_Term =  2.907e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8 x  9   10   11   12   13   14 x 15   16 x 17   18   19
+Repl pr   .08       .07       .04       .05       1.0       .07       .32       1.0       .69       .13
+
+Replica exchange at step 52000 time 104.00000
+Repl 5 <-> 6  dE_term =  0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  2.130e+00  dE_Term =  2.130e+00 (kT)
+Repl ex  0    1 x  2    3    4    5    6    7    8    9   10   11   12   13 x 14   15   16   17   18   19
+Repl pr        1.0       .20       .12       .00       .02       .02       1.0       .09       .41     
+
+           Step           Time
+          52500      105.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.43207e+03    1.28337e+04    5.24222e+02    4.48813e+03    2.93629e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.24578e+05   -5.00958e+03   -1.07704e+06    2.31238e+03   -8.98514e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.71838e+05   -7.26677e+05   -7.31550e+05    3.00417e+02   -1.20328e+02
+ Pressure (bar)   Constr. rmsd
+   -1.24396e+01    2.67230e-05
+
+Replica exchange at step 52500 time 105.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.155e+00  dE_Term =  2.155e+00 (kT)
+Repl ex  0    1    2    3    4 x  5    6    7    8    9   10   11   12   13   14 x 15   16   17   18 x 19
+Repl pr   .08       .05       1.0       .12       .00       .03       .43       1.0       .15       1.0
+
+Replica exchange at step 53000 time 106.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  2.280e+00  dE_Term =  2.280e+00 (kT)
+Repl ex  0    1 x  2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+Repl pr        1.0       .12       .10       .43       .01       .00       .04       .38       .11     
+
+Replica exchange at step 53500 time 107.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  1.629e+00  dE_Term =  1.629e+00 (kT)
+Repl ex  0 x  1    2    3    4 x  5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+Repl pr   1.0       .04       1.0       .20       .02       .03       .13       .10       .06       .00
+
+Replica exchange at step 54000 time 108.00000
+Repl 5 <-> 6  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.957e+00  dE_Term =  2.957e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8    9 x 10   11 x 12   13 x 14   15   16   17   18   19
+Repl pr        .10       .06       .05       .44       .58       .30       .34       .00       .13     
+
+Replica exchange at step 54500 time 109.00000
+Repl 6 <-> 7  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed = -2.957e+00  dE_Term = -2.957e+00 (kT)
+Repl ex  0    1    2 x  3    4    5    6 x  7    8    9   10 x 11   12   13   14   15   16   17   18   19
+Repl pr   .12       1.0       .01       1.0       .09       .14       .18       .00       .01       .02
+
+           Step           Time
+          55000      110.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.47998e+03    1.28926e+04    5.62625e+02    4.42399e+03    2.92878e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.22473e+05   -5.01699e+03   -1.07405e+06    2.27774e+03   -8.97672e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.72178e+05   -7.25493e+05   -7.31905e+05    3.01013e+02   -1.20684e+02
+ Pressure (bar)   Constr. rmsd
+   -9.99342e+01    2.65674e-05
+
+Replica exchange at step 55000 time 110.00000
+Repl 5 <-> 6  dE_term =  0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed = -6.264e-01  dE_Term = -6.264e-01 (kT)
+Repl ex  0    1    2    3    4    5 x  6    7    8    9   10   11 x 12   13   14   15   16   17   18   19
+Repl pr        .03       .04       1.0       .25       .02       .14       .00       .15       .01     
+
+Replica exchange at step 55500 time 111.00000
+Repl 6 <-> 7  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  3.483e+00  dE_Term =  3.483e+00 (kT)
+Repl ex  0    1    2    3    4    5    6    7    8 x  9   10   11   12 x 13   14 x 15   16   17   18   19
+Repl pr   .00       .07       .09       .03       1.0       .39       1.0       1.0       .64       .20
+
+Replica exchange at step 56000 time 112.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  4.836e+00  dE_Term =  4.836e+00 (kT)
+Repl ex  0    1    2    3 x  4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+Repl pr        .08       .30       .01       .22       .43       .33       .47       .07       .00     
+
+Replica exchange at step 56500 time 113.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  5.262e-01  dE_Term =  5.262e-01 (kT)
+Repl ex  0 x  1    2 x  3    4    5    6    7    8 x  9   10   11   12 x 13   14 x 15   16   17   18 x 19
+Repl pr   1.0       .03       .37       .59       1.0       .03       .38       .37       .01       1.0
+
+Writing checkpoint, step 56700 at Thu Feb 10 22:26:41 2022
+
+
+Replica exchange at step 57000 time 114.00000
+Repl 5 <-> 6  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.781e+00  dE_Term =  2.781e+00 (kT)
+Repl ex  0    1 x  2    3    4    5    6    7    8    9   10   11   12   13 x 14   15 x 16   17 x 18   19
+Repl pr        .76       .21       .06       .34       .02       .29       .25       .78       1.0     
+
+           Step           Time
+          57500      115.00000
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.63224e+03    1.28213e+04    5.17171e+02    4.45184e+03    2.95845e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.22932e+05   -5.00055e+03   -1.07318e+06    2.29772e+03   -8.95946e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.72796e+05   -7.23150e+05   -7.32130e+05    3.02092e+02   -1.19895e+02
+ Pressure (bar)   Constr. rmsd
+   -1.15137e+01    2.65615e-05
+
+Replica exchange at step 57500 time 115.00000
+Repl 6 <-> 7  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed = -5.011e-02  dE_Term = -5.011e-02 (kT)
+Repl ex  0    1    2    3    4    5    6 x  7    8 x  9   10 x 11   12   13   14   15   16   17   18 x 19
+Repl pr   .00       .00       .03       1.0       1.0       1.0       .02       .28       .03       1.0
+
+Replica exchange at step 58000 time 116.00000
+Repl 5 <-> 6  dE_term =  0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  2.280e+00  dE_Term =  2.280e+00 (kT)
+Repl ex  0    1 x  2    3    4    5    6    7    8    9   10   11   12   13 x 14   15   16   17 x 18   19
+Repl pr        1.0       .05       .10       .01       .00       .04       .03       .00       .86     
+
+Replica exchange at step 58500 time 117.00000
+Repl 6 <-> 7  dE_term = -0.000e+00 (kT)
+  dpV = -0.000e+00  d =  0.000e+00
+dplumed =  1.779e+00  dE_Term =  1.779e+00 (kT)
+Repl ex  0    1    2 x  3    4    5    6    7    8    9   10   11   12   13   14 x 15   16 x 17   18   19
+Repl pr   .45       1.0       .00       .17       .01       .12       .05       .27       1.0       .01
+
+Replica exchange at step 59000 time 118.00000
+Repl 5 <-> 6  dE_term = -0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  7.768e-01  dE_Term =  7.768e-01 (kT)
+Repl ex  0    1 x  2    3 x  4    5 x  6    7 x  8    9   10   11   12   13   14   15 x 16   17   18   19
+Repl pr        1.0       1.0       .46       1.0       .01       .11       .16       .55       .07     
+
+Replica exchange at step 59500 time 119.00000
+Repl 6 <-> 7  dE_term =  0.000e+00 (kT)
+  dpV =  0.000e+00  d =  0.000e+00
+dplumed =  2.756e-01  dE_Term =  2.756e-01 (kT)
+Repl ex  0    1    2 x  3    4 x  5    6 x  7    8    9   10   11   12   13   14   15   16   17   18 x 19
+Repl pr   .02       1.0       1.0       .76       .01       .00       .04       .02       .03       .04
+
+           Step           Time
+          59700      119.40000
+
+Writing checkpoint, step 59700 at Thu Feb 10 22:27:35 2022
+
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.56240e+03    1.28916e+04    4.92096e+02    4.47693e+03    2.94248e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.22879e+05   -5.01854e+03   -1.07519e+06    2.28230e+03   -8.98197e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.69962e+05   -7.28236e+05   -7.32002e+05    2.97137e+02   -1.20758e+02
+ Pressure (bar)   Constr. rmsd
+   -1.01068e+02    0.00000e+00
+
+	<======  ###############  ==>
+	<====  A V E R A G E S  ====>
+	<==  ###############  ======>
+
+	Statistics over 59701 steps using 598 frames
+
+   Energies (kJ/mol)
+          Angle    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    9.39258e+03    1.28963e+04    5.43801e+02    4.46593e+03    2.94812e+04
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.      Potential
+    1.23454e+05   -5.02003e+03   -1.07498e+06    1.83432e+03   -8.97931e+05
+    Kinetic En.   Total Energy  Conserved En.    Temperature Pres. DC (bar)
+    1.71547e+05   -7.26384e+05   -7.29859e+05    2.99909e+02   -1.20830e+02
+ Pressure (bar)   Constr. rmsd
+   -1.46518e+00    0.00000e+00
+
+          Box-X          Box-Y          Box-Z
+    1.07774e+01    8.02214e+00    7.98503e+00
+
+   Total Virial (kJ/mol)
+    5.71358e+04   -1.55070e+01   -1.77546e+02
+   -1.82882e+01    5.72563e+04    1.07082e+02
+   -1.80145e+02    1.07347e+02    5.72507e+04
+
+   Pressure (bar)
+   -3.41838e+00    2.70235e+00    6.90300e+00
+    2.83647e+00    9.64059e-01   -5.73649e+00
+    7.02810e+00   -5.74925e+00   -1.94123e+00
+
+       T-!Water        T-Water
+    2.99601e+02    2.99930e+02
+
+
+       P P   -   P M E   L O A D   B A L A N C I N G
+
+ PP/PME load balancing changed the cut-off and PME settings:
+           particle-particle                    PME
+            rcoulomb  rlist            grid      spacing   1/beta
+   initial  1.200 nm  1.204 nm      72  52  52   0.154 nm  0.384 nm
+   final    1.346 nm  1.350 nm      60  48  48   0.179 nm  0.431 nm
+ cost-ratio           1.41             0.71
+ (note that these numbers concern only part of the total PP and PME load)
+
+
+Replica exchange statistics
+Repl  41 attempts, 21 odd, 20 even
+Repl  average probabilities:
+Repl     0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+Repl      .34  .39  .25  .21  .30  .22  .48  .24  .40  .22  .30  .39  .34  .33  .39  .26  .33  .37  .31
+Repl  number of exchanges:
+Repl     0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+Repl        6    8    5    4    5    3   10    3    9    6    5    8    6    8    8    6    5    8    7
+Repl  average number of exchanges:
+Repl     0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+Repl      .29  .40  .24  .20  .24  .15  .48  .15  .43  .30  .24  .40  .29  .40  .38  .30  .24  .40  .33
+
+
+Repl                                                                                Empirical Transition Matrix
+Repl       1       2       3       4       5       6       7       8       9      10      11      12      13      14      15      16      17      18      19      20
+Repl  0.8537  0.1463  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0
+Repl  0.1463  0.6585  0.1951  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  1
+Repl  0.0000  0.1951  0.6829  0.1220  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  2
+Repl  0.0000  0.0000  0.1220  0.7805  0.0976  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  3
+Repl  0.0000  0.0000  0.0000  0.0976  0.7805  0.1220  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  4
+Repl  0.0000  0.0000  0.0000  0.0000  0.1220  0.8049  0.0732  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  5
+Repl  0.0000  0.0000  0.0000  0.0000  0.0000  0.0732  0.6829  0.2439  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  6
+Repl  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.2439  0.6829  0.0732  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  7
+Repl  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0732  0.7073  0.2195  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  8
+Repl  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.2195  0.6341  0.1463  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  9
+Repl  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.1463  0.7317  0.1220  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000 10
+Repl  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.1220  0.6829  0.1951  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000 11
+Repl  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.1951  0.6585  0.1463  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000 12
+Repl  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.1463  0.6585  0.1951  0.0000  0.0000  0.0000  0.0000  0.0000 13
+Repl  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.1951  0.6098  0.1951  0.0000  0.0000  0.0000  0.0000 14
+Repl  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.1951  0.6585  0.1463  0.0000  0.0000  0.0000 15
+Repl  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.1463  0.7317  0.1220  0.0000  0.0000 16
+Repl  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.1220  0.6829  0.1951  0.0000 17
+Repl  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.1951  0.6341  0.1707 18
+Repl  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.1707  0.8293 19
+
+	M E G A - F L O P S   A C C O U N T I N G
+
+ NB=Group-cutoff nonbonded kernels    NxN=N-by-N cluster Verlet kernels
+ RF=Reaction-Field  VdW=Van der Waals  QSTab=quadratic-spline table
+ W3=SPC/TIP3p  W4=TIP4p (single or pairs)
+ V&F=Potential and force  V=Potential only  F=Force only
+
+ Computing:                               M-Number         M-Flops  % Flops
+-----------------------------------------------------------------------------
+ Pair Search distance check            2272.074536       20448.671     0.0
+ NxN Ewald Elec. + LJ [F]           2357152.592256   155572071.089    97.9
+ NxN Ewald Elec. + LJ [V&F]           28676.255808     3068359.371     1.9
+ 1,4 nonbonded interactions             246.589332       22193.040     0.0
+ Shift-X                                 17.962020         107.772     0.0
+ Angles                                 170.729982       28682.637     0.0
+ Propers                                298.978728       68466.129     0.0
+ Impropers                               18.453948        3838.421     0.0
+ Virial                                 144.754230        2605.576     0.0
+ Stop-CM                                 14.245740         142.457     0.0
+ Calc-Ekin                              284.570700        7683.409     0.0
+ Lincs                                   93.899358        5633.961     0.0
+ Lincs-Mat                             2045.184876        8180.740     0.0
+ Constraint-V                          1512.607824       12100.863     0.0
+ Constraint-Vir                         141.932826        3406.388     0.0
+ Settle                                 441.603036      142637.781     0.1
+-----------------------------------------------------------------------------
+ Total                                               158966558.305   100.0
+-----------------------------------------------------------------------------
+
+
+     R E A L   C Y C L E   A N D   T I M E   A C C O U N T I N G
+
+On 1 MPI rank
+
+ Computing:          Num   Num      Call    Wall time         Giga-Cycles
+                     Ranks Threads  Count      (s)         total sum    %
+-----------------------------------------------------------------------------
+ Neighbor search        1    1        261      33.904         71.029   9.5
+ Launch GPU ops.        1    1      41284       3.577          7.493   1.0
+ Force                  1    1      20642      92.056        192.857  25.7
+ Wait PME GPU gather    1    1      20642       0.656          1.375   0.2
+ Reduce GPU PME F       1    1      20642       4.040          8.464   1.1
+ Wait GPU NB local      1    1      20642       0.298          0.625   0.1
+ NB X/F buffer ops.     1    1      41023      30.078         63.013   8.4
+ Write traj.            1    1         10       2.978          6.238   0.8
+ Update                 1    1      20601      13.836         28.987   3.9
+ Constraints            1    1      20601     136.294        285.535  38.0
+ Rest                                          40.542         84.936  11.3
+-----------------------------------------------------------------------------
+ Total                                        358.259        750.554 100.0
+-----------------------------------------------------------------------------
+
+               Core t (s)   Wall t (s)        (%)
+       Time:      358.259      358.259      100.0
+                 (ns/day)    (hour/ns)
+Performance:        9.937        2.415
+Finished mdrun on rank 0 Thu Feb 10 22:27:36 2022
+PLUMED:                                               Cycles        Total      Average      Minumum      Maximum
+PLUMED:                                                    1     1.386997     1.386997     1.386997     1.386997
+PLUMED: 1 Prepare dependencies                         20683     0.007738     0.000000     0.000000     0.000013
+PLUMED: 3 Waiting for data                                41     0.000064     0.000002     0.000001     0.000007

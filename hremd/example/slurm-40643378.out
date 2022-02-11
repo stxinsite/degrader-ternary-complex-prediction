@@ -1,0 +1,534 @@
+                      :-) GROMACS - gmx mdrun, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi mdrun -cpi -cpt 5 -maxh 0.1 -plumed plumed.dat -replex 500 -hrex -multi 20
+
+Compiled SIMD: None, but for this host/run AVX_512 might be better (see log).
+Reading file topol4.tpr, VERSION 2018.8 (single precision)
+Reading file topol5.tpr, VERSION 2018.8 (single precision)
+Reading file topol12.tpr, VERSION 2018.8 (single precision)
+Reading file topol16.tpr, VERSION 2018.8 (single precision)
+Reading file topol17.tpr, VERSION 2018.8 (single precision)
+Reading file topol19.tpr, VERSION 2018.8 (single precision)
+Reading file topol18.tpr, VERSION 2018.8 (single precision)
+Reading file topol1.tpr, VERSION 2018.8 (single precision)
+Reading file topol2.tpr, VERSION 2018.8 (single precision)
+Reading file topol3.tpr, VERSION 2018.8 (single precision)
+Reading file topol0.tpr, VERSION 2018.8 (single precision)
+Reading file topol6.tpr, VERSION 2018.8 (single precision)
+Reading file topol7.tpr, VERSION 2018.8 (single precision)
+Reading file topol8.tpr, VERSION 2018.8 (single precision)
+Reading file topol9.tpr, VERSION 2018.8 (single precision)
+Reading file topol10.tpr, VERSION 2018.8 (single precision)
+Reading file topol11.tpr, VERSION 2018.8 (single precision)
+Reading file topol13.tpr, VERSION 2018.8 (single precision)
+Reading file topol14.tpr, VERSION 2018.8 (single precision)
+Reading file topol15.tpr, VERSION 2018.8 (single precision)
+
+Reading checkpoint file state0.cpt generated: Thu Feb 10 22:13:15 2022
+
+
+
+Reading checkpoint file state13.cpt generated: Thu Feb 10 22:13:15 2022
+
+
+
+Reading checkpoint file state9.cpt generated: Thu Feb 10 22:13:15 2022
+
+
+
+Reading checkpoint file state2.cpt generated: Thu Feb 10 22:13:15 2022
+
+
+
+Reading checkpoint file state11.cpt generated: Thu Feb 10 22:13:15 2022
+
+
+
+Reading checkpoint file state4.cpt generated: Thu Feb 10 22:13:15 2022
+
+
+
+Reading checkpoint file state15.cpt generated: Thu Feb 10 22:13:14 2022
+
+
+
+Reading checkpoint file state6.cpt generated: Thu Feb 10 22:13:15 2022
+
+
+
+Reading checkpoint file state19.cpt generated: Thu Feb 10 22:13:15 2022
+
+
+
+Reading checkpoint file state14.cpt generated: Thu Feb 10 22:13:15 2022
+
+
+
+Reading checkpoint file state18.cpt generated: Thu Feb 10 22:13:14 2022
+
+
+
+Reading checkpoint file state1.cpt generated: Thu Feb 10 22:13:15 2022
+
+
+
+Reading checkpoint file state7.cpt generated: Thu Feb 10 22:13:15 2022
+
+
+
+Reading checkpoint file state5.cpt generated: Thu Feb 10 22:13:15 2022
+
+
+
+Reading checkpoint file state16.cpt generated: Thu Feb 10 22:13:14 2022
+
+
+
+Reading checkpoint file state17.cpt generated: Thu Feb 10 22:13:14 2022
+
+
+
+Reading checkpoint file state3.cpt generated: Thu Feb 10 22:13:15 2022
+
+
+
+Reading checkpoint file state8.cpt generated: Thu Feb 10 22:13:15 2022
+
+
+
+Reading checkpoint file state10.cpt generated: Thu Feb 10 22:13:15 2022
+
+
+
+Reading checkpoint file state12.cpt generated: Thu Feb 10 22:13:15 2022
+
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.342
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+This is simulation 15 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 13 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 3 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 16 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 12 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 2 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 0 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 14 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 10 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 11 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 19 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 18 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 7 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 17 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 1 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 8 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 6 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 4 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 9 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 5 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39001,     78.0 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39001,     78.0 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39001,     78.0 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39001,     78.0 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39100,     78.2 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39100,     78.2 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39100,     78.2 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39100,     78.2 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39100,     78.2 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39100,     78.2 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39100,     78.2 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39100,     78.2 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39100,     78.2 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39100,     78.2 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39100,     78.2 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39100,     78.2 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39100,     78.2 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39100,     78.2 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39100,     78.2 ps).
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps (continuing from step 39100,     78.2 ps).
+
+Step 59600: Run time exceeded 0.099 hours, will terminate the run
+
+Step 59600: Run time exceeded 0.099 hours, will terminate the run
+
+Step 59600: Run time exceeded 0.099 hours, will terminate the run
+
+Step 59600: Run time exceeded 0.099 hours, will terminate the run
+
+Step 59600: Run time exceeded 0.099 hours, will terminate the run
+
+Step 59600: Run time exceeded 0.099 hours, will terminate the run
+
+Step 59600: Run time exceeded 0.099 hours, will terminate the run
+
+Step 59600: Run time exceeded 0.099 hours, will terminate the run
+
+GROMACS reminds you: "Performance and power are great targets for tuning, but really you want to tune for money!" (Erik Lindahl)
+
+rm: cannot remove '*#*': No such file or directory

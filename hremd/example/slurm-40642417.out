@@ -1,0 +1,3294 @@
+rm: cannot remove 'complex.top': No such file or directory
+rm: cannot remove 'complex.gro': No such file or directory
+rm: cannot remove 'topol*': No such file or directory
+rm: cannot remove 'processed_.top': No such file or directory
+--------------------------------------------------------------------------
+[[52941,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -f config/mini.mdp -c complex.gro -p complex.top -o em.tpr
+
+
+NOTE 1 [file config/mini.mdp]:
+  With Verlet lists the optimal nstlist is >= 10, with GPUs >= 20. Note
+  that with the Verlet scheme, nstlist has no effect on the accuracy of
+  your simulation.
+
+Setting the LD random seed to -1645354160
+Generated 13203 of the 13203 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 13203 of the 13203 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group rest is 142149.00
+Estimate for the relative computational load of the PME mesh part: 0.07
+
+There was 1 note
+
+GROMACS reminds you: "Everybody is Smashing Things Down" (Offspring)
+
+Analysing residue names:
+There are:   264    Protein residues
+There are:     1      Other residues
+There are:     9        Ion residues
+There are: 21436      Water residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 96x72x72, spacing 0.119 0.118 0.117
+This run will generate roughly 6 Mb of data
+                      :-) GROMACS - gmx mdrun, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi mdrun -s em.tpr -deffnm em -cpi -cpt 5 -maxh 2
+
+No previous checkpoint file present with -cpi option, assuming this is a new run.
+Compiled SIMD: None, but for this host/run AVX2_256 might be better (see log).
+Reading file em.tpr, VERSION 2018.8 (single precision)
+Using 1 MPI process
+Using 32 OpenMP threads 
+
+1 GPU auto-selected for this run.
+Mapping of GPU IDs to the 1 GPU task in the 1 rank on this node:
+  PP:0
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Steepest Descents:
+   Tolerance (Fmax)   =  1.00000e+03
+   Number of steps    =       100000
+
+writing lowest energy coordinates.
+
+Steepest Descents converged to Fmax < 1000 in 1796 steps
+Potential Energy  = -1.0430762e+06
+Maximum force     =  9.5381085e+02 on atom 4376
+Norm of force     =  1.5061936e+01
+
+GROMACS reminds you: "My greatest contribution to the field of science is that I never entered it." (Colin Powell)
+
+--------------------------------------------------------------------------
+[[52844,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                     :-) GROMACS - gmx make_ndx, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx make_ndx, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi make_ndx -f em.gro -o index.ndx
+
+
+Reading structure file
+
+GROMACS reminds you: "The future still looks good, and you've got time to rectify all the things that you should" (G. Harrison)
+
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:   264    Protein residues
+There are:     1      Other residues
+There are:     9        Ion residues
+There are: 21436      Water residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+  0 System              : 68820 atoms
+  1 Protein             :  4378 atoms
+  2 Protein-H           :  2169 atoms
+  3 C-alpha             :   264 atoms
+  4 Backbone            :   792 atoms
+  5 MainChain           :  1058 atoms
+  6 MainChain+Cb        :  1312 atoms
+  7 MainChain+H         :  1306 atoms
+  8 SideChain           :  3072 atoms
+  9 SideChain-H         :  1111 atoms
+ 10 Prot-Masses         :  4378 atoms
+ 11 non-Protein         : 64442 atoms
+ 12 Other               :   125 atoms
+ 13 FWZ                 :   125 atoms
+ 14 Cl-                 :     9 atoms
+ 15 Ion                 :     9 atoms
+ 16 FWZ                 :   125 atoms
+ 17 Cl-                 :     9 atoms
+ 18 Water               : 64308 atoms
+ 19 SOL                 : 64308 atoms
+ 20 non-Water           :  4512 atoms
+ 21 Water_and_ions      : 64317 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 
+Copied index group 18 'Water'
+Complemented group: 4512 atoms
+
+ 22 !Water              :  4512 atoms
+
+> 
+--------------------------------------------------------------------------
+[[52801,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                     :-) GROMACS - gmx trjconv, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx trjconv, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi trjconv -s em.gro -f em.gro -n index.ndx -dump 0 -o posre.gro
+
+Will write gro: Coordinate file in Gromos-87 format
+Group     0 (         System) has 68820 elements
+Group     1 (        Protein) has  4378 elements
+Group     2 (      Protein-H) has  2169 elements
+Group     3 (        C-alpha) has   264 elements
+Group     4 (       Backbone) has   792 elements
+Group     5 (      MainChain) has  1058 elements
+Group     6 (   MainChain+Cb) has  1312 elements
+Group     7 (    MainChain+H) has  1306 elements
+Group     8 (      SideChain) has  3072 elements
+Group     9 (    SideChain-H) has  1111 elements
+Group    10 (    Prot-Masses) has  4378 elements
+Group    11 (    non-Protein) has 64442 elements
+Group    12 (          Other) has   125 elements
+Group    13 (            FWZ) has   125 elements
+Group    14 (            Cl-) has     9 elements
+Group    15 (            Ion) has     9 elements
+Group    16 (            FWZ) has   125 elements
+Group    17 (            Cl-) has     9 elements
+Group    18 (          Water) has 64308 elements
+Group    19 (            SOL) has 64308 elements
+Group    20 (      non-Water) has  4512 elements
+Group    21 ( Water_and_ions) has 64317 elements
+Group    22 (         !Water) has  4512 elements
+Select a group: Reading frames from gro file 'Generic title', 68820 atoms.
+Reading frame       0 time    0.000   
+Precision of em.gro is 0.001 (nm)
+Last frame          0 time    0.000   
+Reading frames from gro file 'Generic title', 68820 atoms.
+Reading frame       0 time    0.000   
+Dumping frame at t= 0 ps
+ ->  frame      0 time    0.000      Last frame          0 time    0.000   
+
+
+GROMACS reminds you: "Forcefields are like dating; things go fine for a while and then sometimes it goes really bad." (Alex MacKerell)
+
+Select group for output
+Selected 22: '!Water'
+--------------------------------------------------------------------------
+[[52789,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -f config/nvt.mdp -c em.gro -r posre.gro -p complex.top -n index.ndx -o nvt.tpr
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to 1132896743
+Generated 13203 of the 13203 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 13203 of the 13203 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+Setting gen_seed to 347490270
+Velocities were taken from a Maxwell distribution at 300 K
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.05
+
+GROMACS reminds you: "I'm Only Faking When I Get It Right" (Soundgarden)
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.231 nm, buffer size 0.031 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x56x56, spacing 0.158 0.151 0.151
+This run will generate roughly 23 Mb of data
+                      :-) GROMACS - gmx mdrun, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi mdrun -s nvt.tpr -deffnm nvt -cpi -cpt 5 -maxh 6
+
+No previous checkpoint file present with -cpi option, assuming this is a new run.
+Compiled SIMD: None, but for this host/run AVX2_256 might be better (see log).
+Reading file nvt.tpr, VERSION 2018.8 (single precision)
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.331
+
+Using 1 MPI process
+Using 16 OpenMP threads 
+
+1 GPU auto-selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+starting mdrun 'Generic title'
+500000 steps,   1000.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:    15183.095      948.943     1600.0
+                 (ns/day)    (hour/ns)
+Performance:       91.049        0.264
+
+GROMACS reminds you: "If you open your mind too much, your brains will fall out." (Tim Minchin)
+
+--------------------------------------------------------------------------
+[[52510,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -f config/npt.mdp -c nvt.gro -r posre.gro -t nvt.cpt -p complex.top -n index.ndx -o npt.tpr
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to -1046526613
+Generated 13203 of the 13203 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 13203 of the 13203 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Reading Coordinates, Velocities and Box size from old trajectory
+Will read whole trajectory
+Last frame         -1 time 1000.000   
+Using frame at t = 1000 ps
+Starting time for run is 0 ps
+Estimate for the relative computational load of the PME mesh part: 0.05
+
+GROMACS reminds you: "Just Give Me a Blip" (F. Black)
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.231 nm, buffer size 0.031 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x56x56, spacing 0.158 0.151 0.151
+This run will generate roughly 23 Mb of data
+                      :-) GROMACS - gmx mdrun, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi mdrun -s npt.tpr -deffnm npt -cpi -cpt 5 -maxh 6
+
+No previous checkpoint file present with -cpi option, assuming this is a new run.
+Compiled SIMD: None, but for this host/run AVX2_256 might be better (see log).
+Reading file npt.tpr, VERSION 2018.8 (single precision)
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.331
+
+Using 1 MPI process
+Using 16 OpenMP threads 
+
+1 GPU auto-selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+starting mdrun 'Generic title'
+500000 steps,   1000.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:    15773.024      985.814     1600.0
+                 (ns/day)    (hour/ns)
+Performance:       87.643        0.274
+
+GROMACS reminds you: "The Universe is Somewhere In Here" (J.G.E.M. Fraaije)
+
+--------------------------------------------------------------------------
+[[52401,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -f config/md.mdp -c npt.gro -t npt.cpt -p complex.top -n index.ndx -o md.tpr
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to 1095535076
+Generated 13203 of the 13203 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 13203 of the 13203 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Reading Coordinates, Velocities and Box size from old trajectory
+Will read whole trajectory
+Last frame         -1 time 1000.000   
+Using frame at t = 1000 ps
+Starting time for run is 0 ps
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 1 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There was 1 note
+
+GROMACS reminds you: "I originally implemented PME to prove that you didn't need it..." (Erik Lindahl)
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[52360,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol0.tpr -f config/md.mdp -p topol0.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to 1422129358
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 1 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There was 1 note
+
+GROMACS reminds you: "During my undergraduate work I concluded that electrostatics is unlikely to be important [for enzymes]" (Arieh Warshel, Nobel lecture 2013)
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[52317,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol1.tpr -f config/md.mdp -p topol1.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to -1238207635
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol1.top, line 50086]:
+  System has non-zero total charge: -0.082260
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol1.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "If I could remember the names of all these particles, I’d be a botanist." (Albert Einstein)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[52243,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol2.tpr -f config/md.mdp -p topol2.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to -2013800397
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol2.top, line 50086]:
+  System has non-zero total charge: -0.163624
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol2.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "Stop Drinking My Beer !" (The Amps)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[52200,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol3.tpr -f config/md.mdp -p topol3.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to 515235729
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol3.top, line 50086]:
+  System has non-zero total charge: -0.244188
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol3.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "If your experiment needs a statistician, you need a better experiment." (Ernest Rutherford)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[52155,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol4.tpr -f config/md.mdp -p topol4.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to -2070604894
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol4.top, line 50086]:
+  System has non-zero total charge: -0.324177
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol4.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "This work contains many things which are new and interesting. Unfortunately, everything that is new is not interesting, and everything which is interesting, is not new." (Lev Landau)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[52080,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol5.tpr -f config/md.mdp -p topol5.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to -1707252463
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol5.top, line 50086]:
+  System has non-zero total charge: -0.403121
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol5.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "I never see what has been done; I only see what remains to be done." (Marie Curie)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[52035,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol6.tpr -f config/md.mdp -p topol6.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to -206580517
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol6.top, line 50086]:
+  System has non-zero total charge: -0.481556
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol6.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "She Says She Can't Go Home Without a Chaperone" (E. Costello)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[51994,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol7.tpr -f config/md.mdp -p topol7.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to 2077199176
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol7.top, line 50086]:
+  System has non-zero total charge: -0.559440
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol7.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "Art is what you can get away with." (Andy Warhol)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[51950,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol8.tpr -f config/md.mdp -p topol8.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to 1813281499
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol8.top, line 50086]:
+  System has non-zero total charge: -0.636455
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol8.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "I Am a Poor Lonesome Cowboy" (Lucky Luke)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[51874,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol9.tpr -f config/md.mdp -p topol9.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to 1135267930
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol9.top, line 50086]:
+  System has non-zero total charge: -0.712696
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol9.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "It's Against the Rules" (Pulp Fiction)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[51831,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol10.tpr -f config/md.mdp -p topol10.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to 6939242
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol10.top, line 50086]:
+  System has non-zero total charge: -0.788230
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol10.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "I Calculate My Birthright" (P.J. Harvey)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[51788,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol11.tpr -f config/md.mdp -p topol11.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to 1961039210
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol11.top, line 50086]:
+  System has non-zero total charge: -0.863236
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol11.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "Youth is wasted on the young" (The Smashing Pumpkins)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[51713,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol12.tpr -f config/md.mdp -p topol12.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to 797368965
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol12.top, line 50086]:
+  System has non-zero total charge: -0.937286
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol12.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "Never measure the height of a mountain until you have reached the top. Then you will see how low it was." (Dag Hammarskjold)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[51668,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol13.tpr -f config/md.mdp -p topol13.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to -1590106359
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol13.top, line 50086]:
+  System has non-zero total charge: -1.010950
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol13.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "Baseball Heroes Only" (P.J. Harvey)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[51625,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol14.tpr -f config/md.mdp -p topol14.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to 694236824
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol14.top, line 50086]:
+  System has non-zero total charge: -1.083852
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol14.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "Microbiology Lab - Staph Only." (Anonymous)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[51580,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol15.tpr -f config/md.mdp -p topol15.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to -510220676
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol15.top, line 50086]:
+  System has non-zero total charge: -1.156238
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol15.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "You Could Make More Money As a Butcher" (F. Zappa)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[51297,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol16.tpr -f config/md.mdp -p topol16.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to 749825868
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol16.top, line 50086]:
+  System has non-zero total charge: -1.227936
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol16.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "If you're doing I/O, you're doing it wrong!" (Cannada "Drew" Lewis)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[54955,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol17.tpr -f config/md.mdp -p topol17.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to 1745161618
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol17.top, line 50086]:
+  System has non-zero total charge: -1.298502
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol17.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "Computer dating is fine, if you are a computer." (Rita May Brown)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[54655,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol18.tpr -f config/md.mdp -p topol18.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to 1784778990
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol18.top, line 50086]:
+  System has non-zero total charge: -1.368929
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol18.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "It's 2040 now. Our President is a plant." (Ghostbusters 2016)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+--------------------------------------------------------------------------
+[[54580,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: stxcompute003
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+                      :-) GROMACS - gmx grompp, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example
+Command line:
+  gmx_mpi grompp -maxwarn 1 -o topol19.tpr -f config/md.mdp -p topol19.top -c md.tpr -n index.ndx
+
+Ignoring obsolete mdp entry 'title'
+Setting the LD random seed to 1024081087
+Generated 52650 of the 52650 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 52650 of the 52650 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'system1'
+Excluding 3 bonded neighbours molecule type 'system2'
+Excluding 3 bonded neighbours molecule type 'FWZ'
+Excluding 3 bonded neighbours molecule type 'Cl-'
+Excluding 3 bonded neighbours molecule type 'WAT'
+
+NOTE 1 [file topol19.top, line 50086]:
+  System has non-zero total charge: -1.438518
+  Total charge should normally be an integer. See
+  http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+  for discussion on how close it should be to an integer.
+  
+
+
+
+WARNING 1 [file topol19.top, line 50086]:
+  You are using Ewald electrostatics in a system with net charge. This can
+  lead to severe artifacts, such as ions moving into regions with low
+  dielectric, due to the uniform background charge. We suggest to
+  neutralize your system with counter ions, possibly in combination with a
+  physiological salt concentration.
+
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+turning all bonds into constraints...
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+J. S. Hub, B. L. de Groot, H. Grubmueller, G. Groenhof
+Quantifying Artifacts in Ewald Simulations of Inhomogeneous Systems with a Net
+Charge
+J. Chem. Theory Comput. 10 (2014) pp. 381-393
+-------- -------- --- Thank You --- -------- --------
+
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Reading file md.tpr, VERSION 2018.8 (single precision)
+Removing all charge groups because cutoff-scheme=Verlet
+Number of degrees of freedom in T-Coupling group !Water is 8977.80
+Number of degrees of freedom in T-Coupling group Water is 128613.20
+Estimate for the relative computational load of the PME mesh part: 0.04
+
+NOTE 2 [file config/md.mdp]:
+  This run will generate roughly 29360 Mb of data
+
+
+There were 2 notes
+
+There was 1 warning
+
+GROMACS reminds you: "The scientist is not the person who always gives the right answers, he is the one who asks the right questions." (Claude Levi-Strauss)
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+Calculated rlist for 1x1 atom pair-list as 1.234 nm, buffer size 0.034 nm
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 72x52x52, spacing 0.150 0.154 0.154
+                      :-) GROMACS - gmx mdrun, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2018.8
+Executable:   /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir/bin/gmx_mpi
+Data prefix:  /bgfs01/insite/utsab.shrestha/programs/gmx_plumed4/gromacs-2018.8/install_dir
+Working dir:  /bgfs01/insite02/utsab.shrestha/shared/ms_degrader-ternary-complex-prediction/degrader-ternary-complex-prediction/hremd/example/hremd_run
+Command line:
+  gmx_mpi mdrun -cpi -cpt 5 -maxh 0.2 -plumed plumed.dat -replex 500 -hrex -multi 20
+
+No previous checkpoint file present with -cpi option, assuming this is a new run.
+Compiled SIMD: None, but for this host/run AVX2_256 might be better (see log).
+Reading file topol2.tpr, VERSION 2018.8 (single precision)
+Reading file topol9.tpr, VERSION 2018.8 (single precision)
+Reading file topol1.tpr, VERSION 2018.8 (single precision)
+Reading file topol0.tpr, VERSION 2018.8 (single precision)
+Reading file topol3.tpr, VERSION 2018.8 (single precision)
+Reading file topol6.tpr, VERSION 2018.8 (single precision)
+Reading file topol8.tpr, VERSION 2018.8 (single precision)
+Reading file topol11.tpr, VERSION 2018.8 (single precision)
+Reading file topol12.tpr, VERSION 2018.8 (single precision)
+Reading file topol13.tpr, VERSION 2018.8 (single precision)
+Reading file topol14.tpr, VERSION 2018.8 (single precision)
+Reading file topol17.tpr, VERSION 2018.8 (single precision)
+Reading file topol18.tpr, VERSION 2018.8 (single precision)
+Reading file topol19.tpr, VERSION 2018.8 (single precision)
+Reading file topol4.tpr, VERSION 2018.8 (single precision)
+Reading file topol5.tpr, VERSION 2018.8 (single precision)
+Reading file topol7.tpr, VERSION 2018.8 (single precision)
+Reading file topol10.tpr, VERSION 2018.8 (single precision)
+Reading file topol15.tpr, VERSION 2018.8 (single precision)
+Reading file topol16.tpr, VERSION 2018.8 (single precision)
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.341
+
+This is simulation 15 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 18 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 8 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 13 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 9 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 16 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 11 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 4 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 17 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 12 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 5 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 1 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 19 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 10 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 7 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 14 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 3 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 0 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 6 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+This is simulation 2 out of 20 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+Using 1 OpenMP thread 
+
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+4 GPUs auto-selected for this run.
+Mapping of GPU IDs to the 40 GPU tasks in the 20 ranks on this node:
+  PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:0,PME:0,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:1,PME:1,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:2,PME:2,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3,PP:3,PME:3
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+
+WARNING: This run will generate roughly 28132 Mb of data
+
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+starting mdrun 'Generic title'
+500000000000 steps, 1000000000.0 ps.
+
+Step 39400: Run time exceeded 0.198 hours, will terminate the run
+
+Step 39400: Run time exceeded 0.198 hours, will terminate the run
+
+Step 39400: Run time exceeded 0.198 hours, will terminate the run
+
+Step 39400: Run time exceeded 0.198 hours, will terminate the run
+
+Step 39400: Run time exceeded 0.198 hours, will terminate the run
+
+Step 39400: Run time exceeded 0.198 hours, will terminate the run
+
+Step 39400: Run time exceeded 0.198 hours, will terminate the run
+
+Step 39400: Run time exceeded 0.198 hours, will terminate the run
+
+GROMACS reminds you: "Jesus Can't Save You, Though It's Nice to Think He Tried" (Black Crowes)
+
+rm: cannot remove '*#*': No such file or directory
+rm: cannot remove '*#*': No such file or directory
