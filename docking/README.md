@@ -222,12 +222,12 @@ python scripts/getDistanceStats.py 003.linker/0.3A/ N1 C1 003.linker/0.3A/linker
 
 This will produce the file `003.linker/0.1A/linker_dist.stat` that contains distances between atoms `N1` and  `C1` (in A) for each of the generated conformers. The last line in this file contains the mean , standard deviation and number of conformers – see image below:
 
-[plot](https://github.com/stxinsite/degrader-ternary-complex-prediction/blob/taras-dev/docking/pics/fig-1.png)
+[plot](./pics/fig-1.png)
 
 Screenshot with the contents of the file `003.linker/0.1A/linker_dist.stat`
 To visualize the distribution of distances between end of the linker: edit the file `003.linker/0.3A/linker_dist.stat` – remove the last line and add the following line at the top:
 
-[plot](https://github.com/stxinsite/degrader-ternary-complex-prediction/blob/taras-dev/docking/pics/fig-2.png)
+[plot](./pics/fig-2.png)
 
 
 Then, run the following commands:
@@ -238,7 +238,7 @@ python scripts/seaborn_hist_linker.py 003.linker/0.3A/linker_dist.stat
 ```
 And as a result get the following figure:
 
-[plot](https://github.com/stxinsite/degrader-ternary-complex-prediction/blob/taras-dev/docking/pics/fig-3.png)
+[plot](./pics/fig-3.png)
 
 The values of mean distance  and standard deviation will be used in the restraints on the next step – binary docking with Rosetta.
 
@@ -301,6 +301,7 @@ SiteConstraint CA 129B A SIGMOID 10.0 2.0
 where the line 1  indicates that there will be a harmonic restraint between atom `N1` of the “residue“ 1  of the chain `X`  (i.e., the warhead) and atom `C9` of the “residue“ 1  of the chain `Y`  (i.e., the ligand). The values 8.9 and 0.7 are the mean and standard deviation identified on the previous step.
 *NOTE:* the distance between these atoms in the original X-tal structure `6HAX` is 7.9 A – see figure below:
 
+[plot](./pics/fig-4.png)
 
    
 The line 2  in file `004.dock/constraints.sigmoid.1.txt`  indicates that there will be a sigmoid-type distance restraint between the CA atom of the residue 34 of the chain `A`  and any heavy atom of the chain `B` . Same logic applies to lines 3--42. These restraints are derived from the residues identified to have the highest change on the deuterium incorporation from the HDX experiment – see figure below (blue color represents the residues with the highest deuterium exchange):                 
@@ -403,6 +404,8 @@ This section follows the protocol suggested by Nan Bai et al. ( https://pubs.acs
 
 6.1. Preparation
 Prepare (by visual inspection) the following text files with the lists of atoms from the linker and ligand/warhead that will be used in structural alignment:
+
+[plot](./pics/fig-5.png)
 
 Figure – Illustration of the mechanism of matching atoms during the alignment of linker onto the warhead and ligand.
 The file `decoy_atom_list.txt`  contains a list of atoms from the warhead (residue ID `1_X`) and ligand (residue ID `1_Y`) that will be used in the alignment of linker.
