@@ -30,8 +30,8 @@ mkdir $WORK_DIR
 
 #LOG=$WORK_DIR/log
 
-cp -r $HOME_DIR/amber_inputs/ $WORK_DIR
-cp $HOME_DIR/python_scripts/amber_ff_hax_contacts_based_ligase_binding_warhead_rmsd_vhl_protac_contacts.py $WORK_DIR
+cp -r $HOME_DIR/6HAY_inputs/ $WORK_DIR
+cp $HOME_DIR/python_scripts/6HAX_triple_distance_metric.py $WORK_DIR
 
 cd $WORK_DIR
 
@@ -42,7 +42,7 @@ echo "------------"# 1>> $LOG 2>> $LOG
 echo "Running script"# 1>> $LOG 2>> $LOG
 echo "===============================================================================" #1>> $LOG 2>> $LOG
                                                                                                                                                              
-python -u amber_ff_hax_contacts_based_ligase_binding_warhead_rmsd_vhl_protac_contacts.py 1 2000 10000 48 4
+python -u 6HAX_triple_distance_metric.py 1 2000 10000 48 4
 
 echo "===============================================================================" #1>> $LOG 2>> $LOG
 echo "done with script"# 1>> $LOG 2>> $LOG
